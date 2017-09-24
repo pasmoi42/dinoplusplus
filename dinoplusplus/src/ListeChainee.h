@@ -17,7 +17,7 @@ class ListeChainee
   /* contient de quoi faire une nouvelle liste chainee: son constructeur*/
   /* contient les methodes de manipulation de la chaine de maillons:
    * * Ajouter un maillon.
-   *
+   *gg
    *  */
 public:
   /* on met laChaineDeMaillons en plublic: on l'encapsulera apres. */

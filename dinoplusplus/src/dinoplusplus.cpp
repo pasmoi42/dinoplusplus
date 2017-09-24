@@ -9,6 +9,6 @@ int main()
   ListeChainee *liste;
 
   liste = new ListeChainee();
-  cout << "test: " << liste << endl; // prints !!!Hello World!!!
+  cout << "testeee: " << liste << endl; // prints !!!Hello World!!!
   return 0;
 }
