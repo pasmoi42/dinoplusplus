@@ -12,6 +12,9 @@ int main()
   cout << "testeee: " << liste << endl; // prints !!!Hello World!!!
   //liste->ajouteEnFin(42.0);
   liste->ajouteAuDebut(42.0);
+  liste->ajouteAuDebut(505.0);
+  liste->ajouteAuDebut(99.0);
+  liste->ajouteAuDebut(21.0);
   liste->AfficheDebug();
 
   return 0;
