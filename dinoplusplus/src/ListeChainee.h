@@ -27,6 +27,7 @@ public:
   void AfficheDebug();
 
   void ajouteEnFin(double donnee);
+  void ajouteAuDebut(double donnee);
 };
 
 #endif /* LISTECHAINEE_H_ */

@@ -7,10 +7,16 @@
 
 #include "Maillon.h"
 
-Maillon::Maillon()
+/**
+ * Initialisation complete du nouveau maillon cree
+ */
+Maillon::Maillon(double paramDonee)
 {
-  // TODO Auto-generated constructor stubss
+  this->donnee = paramDonee;
+  this->suivant = nullptr; //super important!!!
 
+  /* et donc la, a la fin de mon constructeur, l'objet
+  est coherent: entièrement valide! */
 }
 
 Maillon::~Maillon()

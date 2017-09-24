@@ -28,7 +28,7 @@ public:
   double donnee;
   Maillon *suivant;
 
-  Maillon();
+  Maillon(double paramDonee);
   virtual ~Maillon();
 };
 

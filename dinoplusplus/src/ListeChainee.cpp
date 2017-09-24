@@ -32,3 +32,15 @@ void ListeChainee::ajouteEnFin(double donnee)
 {
 
 }
+
+void ListeChainee::ajouteAuDebut(double donnee)
+{
+  Maillon *nouveauMaillon;
+
+  nouveauMaillon = new Maillon(donnee);
+
+  nouveauMaillon->suivant = this->laChaineDeMaillons;
+  this->laChaineDeMaillons = nouveauMaillon;
+
+
+}
