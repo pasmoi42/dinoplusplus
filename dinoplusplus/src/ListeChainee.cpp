@@ -25,6 +25,7 @@ void ListeChainee::AfficheDebug()
   cout << "Debut de la liste: " << endl;
   Maillon *parcours;
 
+
   parcours = this->laChaineDeMaillons;
   while ( parcours != nullptr )
   {
