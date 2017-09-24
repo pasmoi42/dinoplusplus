@@ -7,7 +7,7 @@ int main()
 {
   ListeChainee *liste;
 
-  //petit test de git aaa
+  //petit test de git
   liste = new ListeChainee();
   cout << "testeee: " << liste << endl; // prints !!!Hello World!!!
   liste->AfficheDebug();
