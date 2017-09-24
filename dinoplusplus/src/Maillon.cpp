@@ -16,7 +16,7 @@ Maillon::Maillon(double paramDonee)
   this->suivant = nullptr; //super important!!!
 
   /* et donc la, a la fin de mon constructeur, l'objet
-  est coherent: entièrement valide! */
+  est coherent: entierement valide! */
 }
 
 Maillon::~Maillon()

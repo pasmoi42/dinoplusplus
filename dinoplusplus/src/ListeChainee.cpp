@@ -23,7 +23,14 @@ ListeChainee::~ListeChainee()
 void ListeChainee::AfficheDebug()
 {
   cout << "Debut de la liste: " << endl;
-  //TODO: parcourir la liste pour afficher chaque element
+  Maillon *parcours;
+
+  parcours = this->laChaineDeMaillons;
+  while ( parcours != nullptr )
+  {
+    cout << "Un maillon: " << parcours->donnee << endl;
+    parcours = parcours->suivant;
+  }
 
   cout << "Fin de la liste!" << endl;
 }
@@ -33,6 +40,9 @@ void ListeChainee::ajouteEnFin(double donnee)
 
 }
 
+/*
+  bla bla
+ */
 void ListeChainee::ajouteAuDebut(double donnee)
 {
   Maillon *nouveauMaillon;
