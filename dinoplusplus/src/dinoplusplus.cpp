@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "Maillon.h"
 #include "ListeChainee.h"
@@ -8,8 +7,9 @@ int main()
 {
   ListeChainee *liste;
 
-  //gros test de git
+  //petit test de git
   liste = new ListeChainee();
   cout << "testeee: " << liste << endl; // prints !!!Hello World!!!
+  liste->AfficheDebug();
   return 0;
 }
