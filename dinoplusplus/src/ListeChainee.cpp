@@ -38,6 +38,18 @@ void ListeChainee::AfficheDebug()
 
 void ListeChainee::ajouteEnFin(double donnee)
 {
+	Maillon *nouveauMaillon;
+	//Creation d'un maillon avec sa donnee
+	nouveauMaillon = new Maillon(donnee);
+	//Le maillon suivant du nouveau maillon pointe sur  nullptr
+	nouveauMaillon->suivant = nullptr;
+	//parcours de la chaine pour trouver le dernier maillon de la chaine
+	while (laChaineDeMaillons->suivant != nullptr)
+	{
+		laChaineDeMaillons = laChaineDeMaillons->suivant;
+	}
+	//Le dernier maillon de la chaine actuelle pointe sur le maillon cree precedement
+	laChaineDeMaillons->suivant = nouveauMaillon;
 
 }
 

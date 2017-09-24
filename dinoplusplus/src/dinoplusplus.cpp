@@ -16,6 +16,8 @@ int main()
   liste->ajouteAuDebut(99.0);
   liste->ajouteAuDebut(21.0);
   liste->AfficheDebug();
+  liste->ajouteEnFin(999.0);
+  liste->AfficheDebug();
 
   return 0;
 }
