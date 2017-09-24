@@ -27,3 +27,8 @@ void ListeChainee::AfficheDebug()
 
   cout << "Fin de la liste!" << endl;
 }
+
+void ListeChainee::ajouteEnFin(double donnee)
+{
+
+}

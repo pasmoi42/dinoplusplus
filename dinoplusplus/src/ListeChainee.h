@@ -25,6 +25,8 @@ public:
   ListeChainee();
   virtual ~ListeChainee();
   void AfficheDebug();
+
+  void ajouteEnFin(double donnee);
 };
 
 #endif /* LISTECHAINEE_H_ */

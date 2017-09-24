@@ -10,6 +10,8 @@ int main()
   //petit test de git
   liste = new ListeChainee();
   cout << "testeee: " << liste << endl; // prints !!!Hello World!!!
+  liste->ajouteEnFin(42.0);
   liste->AfficheDebug();
+
   return 0;
 }
