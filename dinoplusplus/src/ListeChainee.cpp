@@ -41,11 +41,12 @@ void ListeChainee::ajouteEnFin(double donnee)
 	Maillon *nouveauMaillon;
 	//Creation d'un maillon avec sa donnee et son suivant pointe sur  nullptr
 	nouveauMaillon = new Maillon(donnee);
-	//parcours de la chaine pour trouver le dernier maillon de la chaine
+	//déclaration du pointeur qui va parcourir la liste chainée
 	Maillon *parcour = laChaineDeMaillons ;
-
+	//parcours de la chaine pour trouver le dernier maillon de la chaine
 	while (parcour->suivant != nullptr)
 	{
+		//passage au maillon suivant
 		parcour = parcour->suivant;
 	}
 	//Le dernier maillon de la chaine actuelle pointe sur le maillon cree precedement
