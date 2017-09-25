@@ -28,6 +28,14 @@ public:
 
   void ajouteEnFin(double donnee);
   void ajouteAuDebut(double donnee);
+
+  /**
+   * Cette fonction echange la position dans la liste des
+   * maillons pointes par m1 et m2.
+   * Si m1 ou m2 ne sont par dans la liste, la fonction return 1
+   * Si l'echange se passe bien, la fonction return 0.
+   */
+  int echangesMaillons(Maillon *m1, Maillon *m2);
 };
 
 #endif /* LISTECHAINEE_H_ */
