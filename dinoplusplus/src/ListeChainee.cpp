@@ -65,6 +65,4 @@ void ListeChainee::ajouteAuDebut(double donnee)
 
   nouveauMaillon->suivant = this->laChaineDeMaillons;
   this->laChaineDeMaillons = nouveauMaillon;
-
-
 }
