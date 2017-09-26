@@ -52,6 +52,7 @@ void ListeChainee::ajouteEnFin(double donnee)
 	//Le dernier maillon de la chaine actuelle pointe sur le maillon cree precedement
 	parcour->suivant = nouveauMaillon;
 
+
 }
 
 /*
