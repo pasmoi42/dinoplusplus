@@ -75,17 +75,23 @@ int ListeChainee::echangesMaillons(Maillon *m1, Maillon *m2)
 	//déclaration du pointeur temporaire 2 qui parcour la chaine pour trouver le precedent maillon m2
 	Maillon *tmp2;
 	//déclaration du pointeur temporaire 3 qui se positionne sur le suivant de m1
-	Maillon *tmp3 = m1->suivant;
+	Maillon *tmp3;
+	if (m1->suivant != nullptr)
+		 tmp3 = m1->suivant;
+	else return 1;
 	//déclaration d'un pointeur de parcour
 	Maillon *parcour = laChaineDeMaillons;
 	//parcour de la chaine pour trouver le precedent du premier maillon (m1)
 	//parcour de la chaine pour trouver le precedent du deuxieme maillon (m2)
-	while(!tmp1 == m1 || tmp2 == m2)
+	while(!(tmp1 == m1) || !(tmp2 == m2))
 	{
 		if (parcour->suivant == m1)
 			tmp1 = parcour;
 		else if (parcour->suivant == m2)
 			tmp2 = parcour;
+		else if (parcour->suivant != nullptr)
+			parcour = parcour->suivant;
+		else return 1;
 	}
 	//on fait pointer  m1 sur le suivant de m2
 	m1->suivant = m2->suivant;
@@ -97,4 +103,5 @@ int ListeChainee::echangesMaillons(Maillon *m1, Maillon *m2)
 	tmp1->suivant = m2;
 	//on fait pointer tmp 2 sur tmp3
 	tmp2->suivant = tmp3;
+	return 0;
 }
