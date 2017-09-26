@@ -19,6 +19,8 @@ int main()
   liste->ajouteEnFin(999.0);
   liste->ajouteEnFin(800.0);
   liste->AfficheDebug();
+  cout << "liste construite. " << endl; // prints !!!Hello World!!!
+  cout << "echange: " << endl; // prints !!!Hello World!!!
   liste->echangesMaillons(liste->laChaineDeMaillons->suivant, liste->laChaineDeMaillons->suivant->suivant->suivant);
   liste->AfficheDebug();
 
