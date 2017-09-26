@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
   ListeChainee *liste;
+  int ret;
 
   //petit test de git
   liste = new ListeChainee();
@@ -21,8 +22,11 @@ int main()
   liste->AfficheDebug();
   cout << "liste construite. " << endl; // prints !!!Hello World!!!
   cout << "echange: " << endl; // prints !!!Hello World!!!
-  liste->echangesMaillons(liste->laChaineDeMaillons->suivant, liste->laChaineDeMaillons->suivant->suivant->suivant);
-  liste->AfficheDebug();
+  ret = liste->echangesMaillons(liste->laChaineDeMaillons, liste->laChaineDeMaillons->suivant->suivant->suivant);
+  if (ret)
+    cout << "erreur" << endl;
+  else
+    liste->AfficheDebug();
 
   return 0;
 }
