@@ -84,7 +84,11 @@ int ListeChainee::echangesMaillons(Maillon *m1, Maillon *m2)
 
 	//on fait pointer le suivant de m2 sur le suivant de le pointeur temporaire 3
 
-	//on fait pointer le suivant du pointeur temporaire sur m2
+	//on fait pointer m2 sur tmp 3
 
-	//on fait pointer le pointeur temporaire 2 sur m1
+	//réaffectation de tmp 3 sur le suivant de tmp1
+
+	//on fait pointer le suivant de tmp1 sur m2
+
+	//on fait pointer tmp 2 sur tmp3
 }
