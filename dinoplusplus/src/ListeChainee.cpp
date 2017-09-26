@@ -71,22 +71,30 @@ void ListeChainee::ajouteAuDebut(double donnee)
 int ListeChainee::echangesMaillons(Maillon *m1, Maillon *m2)
 {
 	//déclaration du pointeur temporaire 1 qui parcour la chaine pour trouver le maillon precendent m1
-
+	Maillon *tmp1;
 	//déclaration du pointeur temporaire 2 qui parcour la chaine pour trouver le precedent maillon m2
-
+	Maillon *tmp2;
 	//déclaration du pointeur temporaire 3 qui se positionne sur le suivant de m1
-
+	Maillon *tmp3 = m1->suivant;
+	//déclaration d'un pointeur de parcour
+	Maillon *parcour = laChaineDeMaillons;
 	//parcour de la chaine pour trouver le precedent du premier maillon (m1)
-
 	//parcour de la chaine pour trouver le precedent du deuxieme maillon (m2)
-
+	while(!tmp1 == m1 || tmp2 == m2)
+	{
+		if (parcour->suivant == m1)
+			tmp1 = parcour;
+		else if (parcour->suivant == m2)
+			tmp2 = parcour;
+	}
 	//on fait pointer  m1 sur le suivant de m2
-
+	m1->suivant = m2->suivant;
 	//on fait pointer m2 sur tmp 3
-
+	m2->suivant = tmp3;
 	//réaffectation de tmp 3 sur le suivant de tmp1
-
+	tmp3 = tmp1->suivant;
 	//on fait pointer  tmp1 sur m2
-
+	tmp1->suivant = m2;
 	//on fait pointer tmp 2 sur tmp3
+	tmp2->suivant = tmp3;
 }
