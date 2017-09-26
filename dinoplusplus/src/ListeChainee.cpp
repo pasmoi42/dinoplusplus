@@ -89,7 +89,7 @@ int ListeChainee::echangesMaillons(Maillon *m1, Maillon *m2)
 			tmp1 = parcour;
 		else if (parcour->suivant == m2)
 			tmp2 = parcour;
-		else if (parcour->suivant != nullptr)
+		if (parcour->suivant != nullptr)
 			parcour = parcour->suivant;
 		else return 1;
 	}
