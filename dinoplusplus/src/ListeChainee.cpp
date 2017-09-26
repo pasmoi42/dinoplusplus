@@ -80,15 +80,13 @@ int ListeChainee::echangesMaillons(Maillon *m1, Maillon *m2)
 
 	//parcour de la chaine pour trouver le precedent du deuxieme maillon (m2)
 
-	//on fait pointer le suivant de m1 sur le suivant de m2
-
-	//on fait pointer le suivant de m2 sur le suivant de le pointeur temporaire 3
+	//on fait pointer  m1 sur le suivant de m2
 
 	//on fait pointer m2 sur tmp 3
 
 	//réaffectation de tmp 3 sur le suivant de tmp1
 
-	//on fait pointer le suivant de tmp1 sur m2
+	//on fait pointer  tmp1 sur m2
 
 	//on fait pointer tmp 2 sur tmp3
 }
