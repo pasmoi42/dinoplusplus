@@ -67,3 +67,24 @@ void ListeChainee::ajouteAuDebut(double donnee)
   nouveauMaillon->suivant = this->laChaineDeMaillons;
   this->laChaineDeMaillons = nouveauMaillon;
 }
+
+int ListeChainee::echangesMaillons(Maillon *m1, Maillon *m2)
+{
+	//déclaration du pointeur temporaire 1 qui parcour la chaine pour trouver le maillon precendent m1
+
+	//déclaration du pointeur temporaire 2 qui parcour la chaine pour trouver le precedent maillon m2
+
+	//déclaration du pointeur temporaire 3 qui se positionne sur le suivant de m1
+
+	//parcour de la chaine pour trouver le precedent du premier maillon (m1)
+
+	//parcour de la chaine pour trouver le precedent du deuxieme maillon (m2)
+
+	//on fait pointer le suivant de m1 sur le suivant de m2
+
+	//on fait pointer le suivant de m2 sur le suivant de le pointeur temporaire 3
+
+	//on fait pointer le suivant du pointeur temporaire sur m2
+
+	//on fait pointer le pointeur temporaire 2 sur m1
+}
