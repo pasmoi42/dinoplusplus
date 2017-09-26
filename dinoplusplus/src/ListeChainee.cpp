@@ -82,7 +82,7 @@ int ListeChainee::echangesMaillons(Maillon *m1, Maillon *m2)
 	//déclaration d'un pointeur de parcour
 	Maillon *parcour = laChaineDeMaillons;
 	//parcour de la chaine pour trouver le precedent du premier maillon (m1)
-	//parcour de la chaine pour trouver le precedent du deuxieme maillon (m2)
+	//parcour de la chaine pour trouver le precedent du deuxieme maillon (m2);
 	while(!(tmp1 == m1) || !(tmp2 == m2))
 	{
 		if (parcour->suivant == m1)
