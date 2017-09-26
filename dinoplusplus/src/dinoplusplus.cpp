@@ -17,6 +17,9 @@ int main()
   liste->ajouteAuDebut(21.0);
   liste->AfficheDebug();
   liste->ajouteEnFin(999.0);
+  liste->ajouteEnFin(800.0);
+  liste->AfficheDebug();
+  liste->echangesMaillons(liste->laChaineDeMaillons->suivant, liste->laChaineDeMaillons->suivant->suivant->suivant);
   liste->AfficheDebug();
 
   return 0;
