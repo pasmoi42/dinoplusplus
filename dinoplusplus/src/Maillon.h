@@ -32,7 +32,7 @@ public:
   std::shared_ptr<Maillon<T>> suivant;
   std::shared_ptr<Maillon<T>> precedent;
 
-  Maillon(double paramDonee);
+  Maillon(T paramDonee);
   virtual ~Maillon();
 };
 

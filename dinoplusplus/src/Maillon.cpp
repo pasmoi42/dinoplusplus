@@ -11,7 +11,7 @@
  * Initialisation complete du nouveau maillon cree
  */
 template <typename T>
-Maillon<T>::Maillon(double paramDonee)
+Maillon<T>::Maillon(T paramDonee)
 {
   this->donnee = paramDonee;
   this->suivant = nullptr;
