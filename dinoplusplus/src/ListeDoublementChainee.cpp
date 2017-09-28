@@ -79,9 +79,9 @@ void ListeDoublementChainee<T>::ajouteAuDebut(const T & donnee)
 template <typename T>
 int ListeDoublementChainee<T>::echangesMaillons(shared_ptr<Maillon<T>> m1, shared_ptr<Maillon<T>> m2)
 {
-	//déclaration du pointeur temporaire 1 qui parcour la chaine pour trouver le maillon precendent m1
+	//déclaration du pointeur temporaire 1 qui parcour la chaine pour trouver le maillon  m1
 	shared_ptr<Maillon<T>> tmp1;
-	//déclaration du pointeur temporaire 2 qui parcour la chaine pour trouver le precedent maillon m2
+	//déclaration du pointeur temporaire 2 qui parcour la chaine pour trouver le precedent m2
 	shared_ptr<Maillon<T>> tmp2;
 	//déclaration du pointeur temporaire 3 qui se positionne sur le suivant de m1
 	shared_ptr<Maillon<T>> tmp3;
