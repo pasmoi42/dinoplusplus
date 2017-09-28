@@ -105,15 +105,5 @@ int ListeDoublementChainee<T>::echangesMaillons(shared_ptr<Maillon<T>> m1, share
 			parcour = parcour->suivant;
 		else return 1;
 	}
-	//on fait pointer  m1 sur le suivant de m2
-	tmp1->suivant->suivant = tmp2->suivant->suivant;
-	//on fait pointer m2 sur tmp 3
-	tmp2->suivant->suivant = tmp3;
-	//réaffectation de tmp 3 sur le suivant de tmp1
-	tmp3 = tmp1->suivant;
-	//on fait pointer  tmp1 sur m2
-	tmp1->suivant = tmp2->suivant;
-	//on fait pointer tmp 2 sur tmp3
-	tmp2->suivant = tmp3;
 	return 0;
 }
