@@ -2,14 +2,13 @@
 #include "Maillon.h"
 #include "ListeChainee.h"
 using namespace std;
-
 int main()
 {
-  ListeChainee *liste;
-  int ret;
+#if(0)
+	ListeChainee<double> liste;
+	int ret;
 
   //petit test de git
-  liste = new ListeChainee();
   cout << "testeee: " << liste << endl; // prints !!!Hello World!!!
   //liste->ajouteEnFin(42.0);
   liste->ajouteAuDebut(42.0);
@@ -27,6 +26,8 @@ int main()
     cout << "erreur" << endl;
   else
     liste->AfficheDebug();
+#endif
+
 
   return 0;
 }

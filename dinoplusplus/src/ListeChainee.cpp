@@ -9,21 +9,22 @@
 #include <iostream>
 
 using namespace std;
-
-ListeChainee::ListeChainee()
+template <typename T>
+ListeChainee<T>::ListeChainee()
 {
   laChaineDeMaillons = nullptr;
 }
-
-ListeChainee::~ListeChainee()
+template <typename T>
+ListeChainee<T>::~ListeChainee()
 {
   // TODO Auto-generated destructor stub
 }
-
-void ListeChainee::AfficheDebug()
+template <typename T>
+void ListeChainee<T>::AfficheDebug()
 {
   cout << "Debut de la liste: " << endl;
-  Maillon *parcours;
+  //Maillon *parcours;
+  shared_ptr<Maillon<T>> parcours;
 
 
   parcours = this->laChaineDeMaillons;
@@ -35,14 +36,16 @@ void ListeChainee::AfficheDebug()
 
   cout << "Fin de la liste!" << endl;
 }
-
-void ListeChainee::ajouteEnFin(double donnee)
+template <typename T>
+void ListeChainee<T>::ajouteEnFin(double donnee)
 {
-	Maillon *nouveauMaillon;
+	shared_ptr<Maillon<T>> nouveauMaillon;
+
 	//Creation d'un maillon avec sa donnee et son suivant pointe sur  nullptr
-	nouveauMaillon = new Maillon(donnee);
+	nouveauMaillon = new Maillon<T>(donnee);
 	//déclaration du pointeur qui va parcourir la liste chainée
-	Maillon *parcour = laChaineDeMaillons ;
+	//Maillon *parcour = laChaineDeMaillons ;
+	shared_ptr<Maillon<T>> parcour = laChaineDeMaillons ;
 	//parcours de la chaine pour trouver le dernier maillon de la chaine
 	while (parcour->suivant != nullptr)
 	{
@@ -58,29 +61,30 @@ void ListeChainee::ajouteEnFin(double donnee)
 /*
   bla bla
  */
-void ListeChainee::ajouteAuDebut(double donnee)
+template <typename T>
+void ListeChainee<T>::ajouteAuDebut(double donnee)
 {
-  Maillon *nouveauMaillon;
-
-  nouveauMaillon = new Maillon(donnee);
+  //Maillon *nouveauMaillon;
+	shared_ptr<Maillon<T>> nouveauMaillon ;
+    nouveauMaillon = new Maillon<T>(donnee);
 
   nouveauMaillon->suivant = this->laChaineDeMaillons;
   this->laChaineDeMaillons = nouveauMaillon;
 }
-
-int ListeChainee::echangesMaillons(Maillon *m1, Maillon *m2)
+template <typename T>
+int ListeChainee<T>::echangesMaillons(shared_ptr<Maillon<T>> m1, shared_ptr<Maillon<T>> m2)
 {
 	//déclaration du pointeur temporaire 1 qui parcour la chaine pour trouver le maillon precendent m1
-	Maillon *tmp1;
+	shared_ptr<Maillon<T>> tmp1;
 	//déclaration du pointeur temporaire 2 qui parcour la chaine pour trouver le precedent maillon m2
-	Maillon *tmp2;
+	shared_ptr<Maillon<T>> tmp2;
 	//déclaration du pointeur temporaire 3 qui se positionne sur le suivant de m1
-	Maillon *tmp3;
+	shared_ptr<Maillon<T>> tmp3;
 	if (m1->suivant != nullptr && m1 != nullptr)
 		 tmp3 = m1->suivant;
 	else return 1;
 	//déclaration d'un pointeur de parcour
-	Maillon *parcour = laChaineDeMaillons;
+	shared_ptr<Maillon<T>> parcour = laChaineDeMaillons;
 	//parcour de la chaine pour trouver le precedent du premier maillon (m1)
 	//parcour de la chaine pour trouver le precedent du deuxieme maillon (m2)
 	while(!(tmp1->suivant == m1) || !(tmp2->suivant == m2))

@@ -10,16 +10,18 @@
 /**
  * Initialisation complete du nouveau maillon cree
  */
-Maillon::Maillon(double paramDonee)
+template <typename T>
+Maillon<T>::Maillon(double paramDonee)
 {
   this->donnee = paramDonee;
-  this->suivant = nullptr; //super important!!!
+  this->suivant = nullptr;
+  this->precedent = nullptr;//super important!!!
 
   /* et donc la, a la fin de mon constructeur, l'objet
   est coherent: entierement valide! */
 }
-
-Maillon::~Maillon()
+template <typename T>
+Maillon<T>::~Maillon()
 {
   // TODO Auto-generated destructor stub
 }

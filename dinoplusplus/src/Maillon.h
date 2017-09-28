@@ -8,9 +8,12 @@
 #ifndef MAILLON_H_
 #define MAILLON_H_
 
+#include <memory>
+#include <iostream>
 /**
  * Cette classe represente un maillon d'une liste chainnee
  */
+template <typename T>
 class Maillon
 {
   /* doit contenir: un champs donnee pour stocker les donnes:
@@ -26,7 +29,8 @@ class Maillon
 
 public:
   double donnee;
-  Maillon *suivant;
+  std::shared_ptr<Maillon<T>> suivant;
+  std::shared_ptr<Maillon<T>> precedent;
 
   Maillon(double paramDonee);
   virtual ~Maillon();
