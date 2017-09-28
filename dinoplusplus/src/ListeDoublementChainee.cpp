@@ -88,15 +88,18 @@ int ListeDoublementChainee<T>::echangesMaillons(shared_ptr<Maillon<T>> m1, share
 	if (m1->suivant != nullptr && m1 != nullptr)
 		 tmp3 = m1->suivant;
 	else return 1;
+	//déclaration du pointeur temporaire 4 qui se positionne sur le precedent de m2
+	shared_ptr<Maillon<T>> tmp4 = m2->precedent;
+
 	//déclaration d'un pointeur de parcour
 	shared_ptr<Maillon<T>> parcour = laChaineDoubleDeMaillons;
-	//parcour de la chaine pour trouver le precedent du premier maillon (m1)
-	//parcour de la chaine pour trouver le precedent du deuxieme maillon (m2)
-	while(!(tmp1->suivant == m1) || !(tmp2->suivant == m2))
+	//parcour de la chaine pour trouver  maillon (m1)
+	//parcour de la chaine pour trouver  maillon (m2)
+	while(!(tmp1 == m1) || !(tmp2 == m2))
 	{
-		if (parcour->suivant == m1)
+		if (parcour == m1)
 			tmp1 = parcour;
-		else if (parcour->suivant == m2)
+		else if (parcour == m2)
 			tmp2 = parcour;
 		if (parcour->suivant != nullptr)
 			parcour = parcour->suivant;
