@@ -28,7 +28,7 @@ class Maillon
 
 
 public:
-  double donnee;
+  T donnee;
   std::shared_ptr<Maillon<T>> suivant;
   std::shared_ptr<Maillon<T>> precedent;
 

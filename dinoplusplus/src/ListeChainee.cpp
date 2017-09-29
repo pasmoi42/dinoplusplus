@@ -4,7 +4,7 @@
  *  Created on: 24 sept. 2017
  *      Author: pm
  */
-
+#if(0)
 #include "ListeChainee.h"
 #include <iostream>
 
@@ -109,3 +109,4 @@ int ListeChainee<T>::echangesMaillons(shared_ptr<Maillon<T>> m1, shared_ptr<Mail
 	tmp2->suivant = tmp3;
 	return 0;
 }
+#endif

@@ -19,17 +19,17 @@ class ListeDoublementChainee
 
 public:
   /* on met laChaineDeMaillons en plublic: on l'encapsulera apres. */
-/*
+  /*
 	Maillon *laChaineDeMaillons;
-*/
-	std::shared_ptr<Maillon<T>> laChaineDoubleDeMaillons;
+   */
+  std::shared_ptr<Maillon<T>> laChaineDoubleDeMaillons;
 
-	ListeDoublementChainee();
-	virtual ~ListeDoublementChainee();
-	void AfficheDebug();
+  ListeDoublementChainee() : laChaineDoubleDeMaillons(nullptr){};
+  virtual ~ListeDoublementChainee(){};
+  void AfficheDebug();
 
-	void ajouteEnFin(const T & donnee);
-	void ajouteAuDebut(const T & donnee);
+  void ajouteEnFin(const T & donnee);
+  void ajouteAuDebut(const T & donnee);
 
   /**
    * Cette fonction echange la position dans la liste des

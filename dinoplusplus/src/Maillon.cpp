@@ -10,6 +10,7 @@
 /**
  * Initialisation complete du nouveau maillon cree
  */
+//TODO: remettre template <typename T>
 template <typename T>
 Maillon<T>::Maillon(T paramDonee)
 {
@@ -26,3 +27,7 @@ Maillon<T>::~Maillon()
   // TODO Auto-generated destructor stub
 }
 
+//on ajoute ca car le makefile genere par eclipse est pouris!
+template class Maillon<std::string>;
+template class Maillon<double>;
+//(et qu'on a tout melange, c'est pour ca qu'il se foire)...
