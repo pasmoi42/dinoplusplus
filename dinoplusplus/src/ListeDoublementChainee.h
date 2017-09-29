@@ -12,20 +12,22 @@
 #include <iostream>
 #include "Maillon.h"
 
+/**
+ * Ze commentaire de la mort qui tue pour expliquer
+ * koi c ListeDoublementChainee!!!!!
+ */
+
 template <typename T>
 class ListeDoublementChainee
 {
-
-
 public:
-  /* on met laChaineDeMaillons en plublic: on l'encapsulera apres. */
-  /*
-	Maillon *laChaineDeMaillons;
-   */
+  /* on met laChaineDoubleDeMaillons en plublic: on l'encapsulera apres. */
   std::shared_ptr<Maillon<T>> laChaineDoubleDeMaillons;
 
-  ListeDoublementChainee() : laChaineDoubleDeMaillons(nullptr){};
-  virtual ~ListeDoublementChainee(){};
+  //ListeDoublementChainee() : laChaineDoubleDeMaillons(nullptr){}; //version pure template
+  ListeDoublementChainee();
+  //virtual ~ListeDoublementChainee(){}; //version pure template
+  virtual ~ListeDoublementChainee();
   void AfficheDebug();
 
   void ajouteEnFin(const T & donnee);
@@ -39,8 +41,6 @@ public:
    */
   int echangesMaillons(std::shared_ptr<Maillon<T>> m1, std::shared_ptr<Maillon<T>> m2);
 };
-
-
 
 
 #endif /* LISTEDOUBLEMENTCHAINEE_H_ */

@@ -2,7 +2,7 @@
  * ListeChainee.h
  *
  *  Created on: 24 sept. 2017
- *      Author: pm
+ *      Author: ...
  */
 
 #ifndef LISTECHAINEE_H_

@@ -2,7 +2,7 @@
  * Maillon.h
  *
  *  Created on: 24 sept. 2017
- *      Author: pm
+ *      Author: ...
  */
 
 #ifndef MAILLON_H_

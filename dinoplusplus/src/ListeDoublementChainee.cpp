@@ -12,21 +12,19 @@
 
 using namespace std;
 
-#if(0)
 template <typename T>
 ListeDoublementChainee<T>::ListeDoublementChainee()
 {
   laChaineDoubleDeMaillons = nullptr;
 }
-#endif
 
-#if(0)
+//#if(0)
 template <typename T>
 ListeDoublementChainee<T>::~ListeDoublementChainee()
 {
   // TODO Auto-generated destructor stub
 }
-#endif
+//#endif
 
 template <class T>
 void ListeDoublementChainee<T>::AfficheDebug()
@@ -168,9 +166,8 @@ int ListeDoublementChainee<T>::echangesMaillons(shared_ptr<Maillon<T>> m1, share
   return 0;
 }
 
-
+//on ajoute ca car le makefile genere par eclipse est pouris!
 template class ListeDoublementChainee<std::string>;
 template class ListeDoublementChainee<double>;
 //template void ListeDoublementChainee<std::string>::ajouteEnFin(const std::string & donnee);
-
-
+//(et qu'on a tout melange, c'est pour ca qu'il se foire)...

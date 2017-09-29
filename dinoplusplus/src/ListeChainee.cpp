@@ -2,7 +2,7 @@
  * ListeChainee.cpp
  *
  *  Created on: 24 sept. 2017
- *      Author: pm
+ *      Author: ...
  */
 #if(0)
 #include "ListeChainee.h"

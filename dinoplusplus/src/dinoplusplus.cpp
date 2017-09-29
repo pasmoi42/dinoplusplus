@@ -189,6 +189,8 @@ using namespace std;
 int main()
 {
 #if(0)
+  test4();
+  test5();
   test6();
   test7();
 #endif

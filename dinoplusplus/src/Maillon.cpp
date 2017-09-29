@@ -2,7 +2,7 @@
  * Maillon.cpp
  *
  *  Created on: 24 sept. 2017
- *      Author: pm
+ *      Author: ...
  */
 
 #include "Maillon.h"
