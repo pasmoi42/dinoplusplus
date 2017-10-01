@@ -13,9 +13,13 @@
 
 class C2Links
 {
+public:
   std::shared_ptr<C2Links> suivant;
   std::shared_ptr<C2Links> precedent;
   std::string donnee;
+
+  C2Links(std::string unMot);
+  virtual ~C2Links();
 };
 
 class CHashTable
@@ -23,7 +27,7 @@ class CHashTable
 private:
   std::vector<std::pair<C2Links*, C2Links*>> m_hashtable;
   int fonctionDeHashage(const std::string &);
-  void ajouteAListe(std::pair<C2Links*, C2Links*> listeDouble, const std::string &mot);
+  void ajouteAListe_push_front(std::pair<C2Links*, C2Links*> listeDouble, const std::string &mot);
 
 public:
   CHashTable(unsigned VSize = 26);
