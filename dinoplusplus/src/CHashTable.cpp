@@ -20,12 +20,12 @@ C2Links::~C2Links()
 
 CHashTable::CHashTable(unsigned VSize)
 {
-  m_hashtable = std::vector<std::pair<C2Links*, C2Links*>>(VSize);
+  m_hashtable = std::vector<std::pair<std::shared_ptr<C2Links>, std::shared_ptr<C2Links>>>(VSize);
 }
 
 
 
-void detruitUneListe(std::pair<C2Links*, C2Links*> uneListe)
+void detruitUneListe(std::pair<std::shared_ptr<C2Links>, std::shared_ptr<C2Links>> uneListe)
 {
 
 }
@@ -45,7 +45,7 @@ int CHashTable::fonctionDeHashage(const std::string &mot)
   return mot[0] - 'a';
 }
 
-void CHashTable::ajouteAListe_push_front(std::pair<C2Links*, C2Links*> listeDouble, const std::string &mot)
+void CHashTable::ajouteAListe_push_front(std::pair<std::shared_ptr<C2Links>, std::shared_ptr<C2Links>> listeDouble, const std::string &mot)
 {
   //C2Links *leMaillon = new  C2Links(mot);
   std::shared_ptr<C2Links> nouveauMaillon  = std::make_shared<C2Links>(mot);

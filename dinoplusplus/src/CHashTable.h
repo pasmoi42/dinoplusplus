@@ -25,9 +25,9 @@ public:
 class CHashTable
 {
 private:
-  std::vector<std::pair<C2Links*, C2Links*>> m_hashtable;
+  std::vector<std::pair<std::shared_ptr<C2Links>, std::shared_ptr<C2Links>>> m_hashtable;
   int fonctionDeHashage(const std::string &);
-  void ajouteAListe_push_front(std::pair<C2Links*, C2Links*> listeDouble, const std::string &mot);
+  void ajouteAListe_push_front(std::pair<std::shared_ptr<C2Links>, std::shared_ptr<C2Links>> listeDouble, const std::string &mot);
 
 public:
   CHashTable(unsigned VSize = 26);
