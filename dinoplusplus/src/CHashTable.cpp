@@ -9,7 +9,8 @@
 
 CHashTable::CHashTable(unsigned VSize)
 {
-  m_hashtable = *(new std::vector<std::pair<C2Links*, C2Links*>>(VSize));
+  //m_hashtable = *(new std::vector<std::pair<C2Links*, C2Links*>>(VSize));
+  m_hashtable = std::vector<std::pair<C2Links*, C2Links*>>(VSize);
 
 }
 
