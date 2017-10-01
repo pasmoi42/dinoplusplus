@@ -10,6 +10,9 @@
 
 #include <memory>
 
+
+class C2Links;
+
 class C2Links
 {
   std::shared_ptr<C2Links> suivant;
