@@ -10,24 +10,11 @@
 
 #include <memory>
 
-
-class C2Links;
-
-class AAA
-{
-  BBB * b;
-};
-
-class BBB
-{
-  AAA * a;
-};
-
-
 class C2Links
 {
   std::shared_ptr<C2Links> suivant;
   std::shared_ptr<C2Links> precedent;
+  std::string donnee;
 };
 
 class CHashTable
