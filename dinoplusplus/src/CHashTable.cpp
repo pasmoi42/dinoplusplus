@@ -12,6 +12,8 @@ CHashTable::CHashTable(unsigned VSize)
   m_hashtable = std::vector<std::pair<C2Links*, C2Links*>>(VSize);
 }
 
+
+
 void detruitUneListe(std::pair<C2Links*, C2Links*> uneListe)
 {
 
@@ -25,5 +27,15 @@ CHashTable::~CHashTable()
   {
     detruitUneListe(m_hashtable[i]);
   }
+}
+
+int CHashTable::fonctionDeHashage(const std::string & mot)
+{
+  return mot[0] - 'a';
+}
+
+void CHashTable::push_front(const std::string &)
+{
+
 }
 
