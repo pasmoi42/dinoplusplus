@@ -9,13 +9,21 @@
 
 CHashTable::CHashTable(unsigned VSize)
 {
-  //m_hashtable = *(new std::vector<std::pair<C2Links*, C2Links*>>(VSize));
   m_hashtable = std::vector<std::pair<C2Links*, C2Links*>>(VSize);
+}
+
+void detruitUneListe(std::pair<C2Links*, C2Links*> uneListe)
+{
 
 }
 
 CHashTable::~CHashTable()
 {
-  // TODO Auto-generated destructor stub
+  unsigned int i;
+
+  for ( i = 0; i < m_hashtable.size() ; ++i )
+  {
+    detruitUneListe(m_hashtable[i]);
+  }
 }
 
