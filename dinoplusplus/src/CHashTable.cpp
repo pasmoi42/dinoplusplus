@@ -47,27 +47,27 @@ int CHashTable::fonctionDeHashage(const std::string &mot)
 
 void CHashTable::ajouteAListe_push_front(std::pair<C2Links*, C2Links*> listeDouble, const std::string &mot)
 {
-  C2Links *leMaillon = new  C2Links(mot);
+  //C2Links *leMaillon = new  C2Links(mot);
+  std::shared_ptr<C2Links> nouveauMaillon  = std::make_shared<C2Links>(mot);
 
-  //listeDouble.first
-  //listeDouble.second
-  //Maillon *nouveauMaillon;
-  shared_ptr<C2Links> nouveauMaillon ;
-    nouveauMaillon = std::make_shared<Maillon<T>>(donnee);
+  //listeDouble.first //suivant
+  //listeDouble.second //precedent
 
-    nouveauMaillon->suivant = this->laChaineDoubleDeMaillons; //si c'est null ... ca marche!
-    //on fixer le precedent de l'ancien premier maillon sur le nouveau
-    /*
+
+  //nouveauMaillon->suivant = this->laChaineDoubleDeMaillons; //si c'est null ... ca marche!
+  nouveauMaillon->suivant = listeDouble.first; //si c'est null ... ca marche!
+  //on fixer le precedent de l'ancien premier maillon sur le nouveau
+  /*
     correction de bug: lors du premier ajoute (ajout d'un maillon a une liste juste que la vide,
       this->laChaineDoubleDeMaillons est a null,
       donc this->laChaineDoubleDeMaillons->precedent == NULL->precedent
       ce qui crash.
       fix: ajoute d'un if non null.
     */
-    if (this->laChaineDoubleDeMaillons != nullptr)
-      this->laChaineDoubleDeMaillons->precedent = nouveauMaillon;
+  if (listeDouble.first != nullptr)
+    listeDouble.first = nouveauMaillon;
 
-    this->laChaineDoubleDeMaillons = nouveauMaillon;
+  listeDouble.first = nouveauMaillon;
 
 }
 
