@@ -9,6 +9,7 @@
 #define CHASHTABLE_H_
 
 #include <memory>
+#include <vector>
 
 class C2Links
 {
@@ -19,8 +20,8 @@ class C2Links
 
 class CHashTable
 {
-//private:
-  //std::vector<std::pair>
+private:
+  std::vector<std::pair<C2Links*, C2Links*>> m_hashtable;
 public:
   CHashTable(unsigned VSize = 26);
   virtual ~CHashTable();

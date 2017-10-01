@@ -184,6 +184,14 @@ void test8()
     liste.AfficheDebug();
 }
 
+/**
+ * Sujet de l'an dernier avec hashmap
+ */
+void test9()
+{
+
+}
+
 
 using namespace std;
 int main()
@@ -193,10 +201,12 @@ int main()
   test5();
   test6();
   test7();
+  test8();
+
 #endif
 
-  test7();
-  test8();
+
+  test9();
 
   return 0;
 }
