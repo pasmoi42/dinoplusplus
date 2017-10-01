@@ -9,7 +9,7 @@
 
 CHashTable::CHashTable(unsigned VSize)
 {
-  // TODO Auto-generated constructor stub
+  m_hashtable = *(new std::vector<std::pair<C2Links*, C2Links*>>(VSize));
 
 }
 
