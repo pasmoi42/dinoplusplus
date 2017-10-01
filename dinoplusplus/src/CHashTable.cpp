@@ -71,15 +71,29 @@ void CHashTable::ajouteAListe_push_front(std::pair<std::shared_ptr<C2Links>, std
   //C2Links *leMaillon = new  C2Links(mot);
   std::shared_ptr<C2Links> nouveauMaillon  = std::make_shared<C2Links>(mot); // fait le new  C2Links(mot)
 
-  //listeDouble.first // est suivant
-  //listeDouble.second //precedent
+  //listeDouble.first // tete de liste
+  //listeDouble.second //queue de liste
 
   nouveauMaillon->suivant = listeDouble.first->suivant; //si c'est null ... ca marche!
   nouveauMaillon->precedent = listeDouble.first;
 
   listeDouble.first->suivant = nouveauMaillon;
   nouveauMaillon->suivant->precedent = nouveauMaillon;
+}
 
+void CHashTable::ajouteAListe_push_back(std::pair<std::shared_ptr<C2Links>, std::shared_ptr<C2Links>> listeDouble, const std::string &mot)
+{
+  //C2Links *leMaillon = new  C2Links(mot);
+  std::shared_ptr<C2Links> nouveauMaillon  = std::make_shared<C2Links>(mot); // fait le new  C2Links(mot)
+
+  //listeDouble.first // tete de liste
+  //listeDouble.second //queue de liste
+
+  nouveauMaillon->suivant = listeDouble.second; //si c'est null ... ca marche!
+  nouveauMaillon->precedent = listeDouble.second->precedent;
+
+  listeDouble.second->precedent = nouveauMaillon;
+  nouveauMaillon->precedent->suivant = nouveauMaillon;
 }
 
 void CHashTable::push_front(const std::string &mot)
