@@ -89,8 +89,8 @@ void CHashTable::ajouteAListe_push_back(std::pair<std::shared_ptr<C2Links>, std:
   //listeDouble.first // tete de liste
   //listeDouble.second //queue de liste
 
-  nouveauMaillon->suivant = listeDouble.second; //si c'est null ... ca marche!
-  nouveauMaillon->precedent = listeDouble.second->precedent;
+  nouveauMaillon->suivant = listeDouble.second;
+  nouveauMaillon->precedent = listeDouble.second->precedent; //si c'est null ... ca marche!
 
   listeDouble.second->precedent = nouveauMaillon;
   nouveauMaillon->precedent->suivant = nouveauMaillon;
@@ -101,3 +101,46 @@ void CHashTable::push_front(const std::string &mot)
   ajouteAListe_push_front(m_hashtable[fonctionDeHashage(mot)], mot);
 }
 
+void CHashTable::push_back(const std::string &mot)
+{
+  ajouteAListe_push_back(m_hashtable[fonctionDeHashage(mot)], mot);
+}
+
+std::shared_ptr<C2Links> CHashTable::Find(const std::string &celuiQuonCherche)
+{
+  std::shared_ptr<C2Links> parcours;
+  std::shared_ptr<C2Links> trouve;
+  std::shared_ptr<C2Links> plusGrandPrecedent;
+  std::pair<std::shared_ptr<C2Links>, std::shared_ptr<C2Links>> listeDouble;
+
+  listeDouble = m_hashtable[fonctionDeHashage(celuiQuonCherche)];
+
+  trouve = nullptr;
+  plusGrandPrecedent = listeDouble.first;
+  parcours = listeDouble.first->suivant;
+  while ( parcours != listeDouble.second)
+  {
+    if (parcours->donnee.compare(celuiQuonCherche) == 0)
+    {
+      trouve = parcours;
+    }
+    else if (parcours->donnee.compare(celuiQuonCherche) < 0)
+    {
+      plusGrandPrecedent = parcours;
+    }
+    parcours = parcours->suivant;
+  }
+
+  if (trouve != nullptr)
+    return trouve;
+  else
+    return plusGrandPrecedent;
+}
+
+
+
+/*
+void CHashTable::add(const std::string &mot)
+{
+  push_front(mot);
+}*/
