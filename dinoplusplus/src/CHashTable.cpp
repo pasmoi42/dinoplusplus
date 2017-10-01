@@ -29,13 +29,18 @@ CHashTable::~CHashTable()
   }
 }
 
-int CHashTable::fonctionDeHashage(const std::string & mot)
+int CHashTable::fonctionDeHashage(const std::string &mot)
 {
   return mot[0] - 'a';
 }
 
-void CHashTable::push_front(const std::string &)
+void CHashTable::ajouteAListe(std::pair<C2Links*, C2Links*> listeDouble, const std::string &mot)
 {
 
+}
+
+void CHashTable::push_front(const std::string &mot)
+{
+  ajouteAListe(m_hashtable[fonctionDeHashage(mot)], mot);
 }
 
