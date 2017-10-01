@@ -75,9 +75,9 @@ void CHashTable::ajouteAListe_push_front(std::pair<std::shared_ptr<C2Links>, std
   //listeDouble.second //precedent
 
   nouveauMaillon->suivant = listeDouble.first->suivant; //si c'est null ... ca marche!
-  listeDouble.first->suivant = nouveauMaillon;
-
   nouveauMaillon->precedent = listeDouble.first;
+
+  listeDouble.first->suivant = nouveauMaillon;
   nouveauMaillon->suivant->precedent = nouveauMaillon;
 
 }
