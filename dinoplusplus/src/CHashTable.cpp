@@ -7,7 +7,7 @@
 
 #include "CHashTable.h"
 
-CHashTable::CHashTable()
+CHashTable::CHashTable(unsigned VSize)
 {
   // TODO Auto-generated constructor stub
 

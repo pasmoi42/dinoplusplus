@@ -22,7 +22,7 @@ class CHashTable
 //private:
   //std::vector<std::pair>
 public:
-  CHashTable();
+  CHashTable(unsigned VSize = 26);
   virtual ~CHashTable();
 };
 
