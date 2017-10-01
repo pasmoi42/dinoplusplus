@@ -20,7 +20,28 @@ C2Links::~C2Links()
 
 CHashTable::CHashTable(unsigned VSize)
 {
+  unsigned int i;
+  std::shared_ptr<C2Links> teteFictive;
+  std::shared_ptr<C2Links> queueFictive;
+
   m_hashtable = std::vector<std::pair<std::shared_ptr<C2Links>, std::shared_ptr<C2Links>>>(VSize);
+
+  for ( i = 0; i < m_hashtable.size() ; ++i )
+  {
+    teteFictive = std::make_shared<C2Links>("Tete Fictive"); //fait le new C2Links("Tete Fictive");
+    queueFictive = std::make_shared<C2Links>("Queue Fictive"); //fait le new C2Links("Tete Fictive");
+
+    m_hashtable[i].second = nullptr;
+    m_hashtable[i].first = teteFictive;
+
+    teteFictive->suivant = queueFictive;
+    teteFictive->precedent = nullptr;
+
+    queueFictive->suivant = nullptr;
+    queueFictive->precedent = teteFictive;
+
+  }
+
 }
 
 
