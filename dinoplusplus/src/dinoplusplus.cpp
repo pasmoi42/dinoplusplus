@@ -202,7 +202,23 @@ void test9()
   myHashTable.add(std::string("acasali"));
 
   myHashTable.debugAffiche();
-  //lol ca marche du premier coup, alors que j ai rien teste avant ...
+  //lol ca marche du premier coup, alors que j ai rien teste avant ... :
+  /*
+   affichage:
+     case 0
+       Tete Fictive
+       aa
+       ab
+       ac
+       acasali
+       alain
+       Queue Fictive
+     case 1
+       Tete Fictive
+       ba
+       basile
+       Queue Fictive
+   */
 }
 
 
