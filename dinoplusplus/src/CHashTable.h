@@ -34,12 +34,11 @@ public:
   CHashTable(unsigned VSize = 26);
   void push_front(const std::string &);
   void push_back(const std::string &);
-  //void add(const std::string &);
+
   std::shared_ptr<C2Links> Find(const std::string &);
+  void add(const std::string &);
 
-
-  //C2Links * Find (const std::string &);
-
+  void debugAffiche();
 
   virtual ~CHashTable();
 };

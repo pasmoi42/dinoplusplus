@@ -3,6 +3,8 @@
 //#include "ListeChainee.h"
 #include "ListeDoublementChainee.h"
 
+#include "CHashTable.h"
+
 
 
 void test1()
@@ -184,13 +186,41 @@ void test8()
     liste.AfficheDebug();
 }
 
+
 /**
  * Sujet de l'an dernier avec hashmap
  */
 void test9()
 {
+  CHashTable myHashTable(2);
+  myHashTable.add(std::string("ab"));
+  myHashTable.add(std::string("aa"));
+  myHashTable.add(std::string("ba"));
+  myHashTable.add(std::string("alain"));
+  myHashTable.add(std::string("ac"));
+  myHashTable.add(std::string("basile"));
+  myHashTable.add(std::string("acasali"));
 
+  myHashTable.debugAffiche();
+  //lol ca marche du premier coup, alors que j ai rien teste avant ... :
+  /*
+   affichage:
+     case 0
+       Tete Fictive
+       aa
+       ab
+       ac
+       acasali
+       alain
+       Queue Fictive
+     case 1
+       Tete Fictive
+       ba
+       basile
+       Queue Fictive
+   */
 }
+
 
 
 using namespace std;
