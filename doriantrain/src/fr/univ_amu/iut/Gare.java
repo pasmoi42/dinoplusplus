@@ -1,6 +1,6 @@
 package fr.univ_amu.iut;
 
-import java.io.Serializable;
+//import java.io.Serializable;
 
 /**
  * Created by p16003786 on 14/11/17.

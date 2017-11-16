@@ -1,7 +1,7 @@
 package fr.univ_amu.iut;
 
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 public class ApplicationHyperFrisette {
 	public static void main(String[] args) {

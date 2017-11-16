@@ -4,4 +4,5 @@ public interface FabriqueWagon {
 
 
     public void setCoutUnitaire(double coutUnitaire);
+    public double getCoutUnitaire();    
 }

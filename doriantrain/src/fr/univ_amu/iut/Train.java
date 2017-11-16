@@ -1,6 +1,6 @@
 package fr.univ_amu.iut;
 
-import java.util.Collection;
+//import java.util.Collection;
 
 public class Train {
     FabriqueTrain categorie;
