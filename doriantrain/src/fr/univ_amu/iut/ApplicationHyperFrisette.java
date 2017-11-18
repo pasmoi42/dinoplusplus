@@ -15,6 +15,7 @@ public class ApplicationHyperFrisette {
 	 *      => ca va etre le modele.
 	 *   - on va avoir des "vues": ça va etre nos vue.
 	 *     a la fin du sujet:
+	 *       * Une vue "debug" uniquement destineee a afficher nos test lors du dev.
 	 *       * Une vue qui affiche l'ensemble du réseau à l'etat actuel : les trains et leur 
 	 *         situation dans le reseau, les gares
 	 *       * Une vue qui affiche le panneau des temps d'arrivee estimes dans les gares
@@ -29,7 +30,7 @@ public class ApplicationHyperFrisette {
 	 *          d'actions possibles ...
 	 *        * ... (des clicks sur les jolis boutons d'une jolie interface graphique). 
 	 *     - Dans le controlleurs, de maniere sepraree du "recevage" d'ordre/ des commandes,
-	 *       on va avoir chaque traitement possible qu'on va coder.
+	 *       on va avoir chaque traitement possible qu'on va coder: moteur de simulation.
 	 * 
 	 */
 	
