@@ -35,7 +35,7 @@ public class ApplicationHyperFrisette {
 	 */
 	
 	
-	public static void main(String[] args) {
+	public static void test_viteuf1() {
 		System.out.println("Plop !");
 		FabriqueTrain factory = new TrainBetail();
 		Train train = new Train(factory);
@@ -76,6 +76,14 @@ public class ApplicationHyperFrisette {
 		Gare gareAix = new Gare ("Aix-en-Provence");
 		Gare gareTataouineLesBains = new Gare ("Tataouine-les-Bains");
 		System.out.println(gareAix + "\n" + gareTataouineLesBains);
+
+		
+	}
+		
+	
+	public static void main(String[] args) {
+		
+		ApplicationHyperFrisette.test_viteuf1();
 
 	}
 }
