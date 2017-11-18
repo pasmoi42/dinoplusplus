@@ -4,6 +4,35 @@ package fr.univ_amu.iut;
 //import java.util.ArrayList;
 
 public class ApplicationHyperFrisette {
+	
+	/*
+	 * Architecture du simulateur HyperFrisette:
+	 * 
+	 * - pattern mvc:
+	 *   - on va avoir un gros bordel ferroviere, avec des sillions (la partie la plus importante du truc),
+	 *      des lignes, des garres, des trains, et des sous.
+	 *      => ca va etre le modele.
+	 *   - on va avoir des "vues": ça va etre nos vue.
+	 *     a la fin du sujet:
+	 *       * Une vue qui affiche l'ensemble du réseau à l'etat actuel : les trains et leur 
+	 *         situation dans le reseau, les gares
+	 *       * Une vue qui affiche le panneau des temps d'arrivee estimes dans les gares
+	 *       * Une vue qui affiche le panneau des temps de départ estimes dans les gares
+	 *       * Un panneau affichant les perturbations dans le reseau : retards, pannes
+	 *          dans les trains ou dans les gares
+	 *    - Pour mettre tout ca en mouvement, et dire a l'application de faire des trucs,
+	 *      on va avoir un controlleur pour la controller:
+	 *        On pourrait imaginer differents types de controlleurs:
+	 *        * un fichier avec une liste de trucs a faire
+	 *        * la lecture sur la ligne de commande de stdin, avec un menu et le choix
+	 *          d'actions possibles ...
+	 *        * ... (des clicks sur les jolis boutons d'une jolie interface graphique). 
+	 *     - Dans le controlleurs, de maniere sepraree du "recevage" d'ordre/ des commandes,
+	 *       on va avoir chaque traitement possible qu'on va coder.
+	 * 
+	 */
+	
+	
 	public static void main(String[] args) {
 		System.out.println("Plop !");
 		FabriqueTrain factory = new TrainBetail();
