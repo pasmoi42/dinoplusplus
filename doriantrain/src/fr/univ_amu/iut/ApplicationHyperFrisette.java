@@ -8,6 +8,7 @@ public class ApplicationHyperFrisette {
 	/*
 	 * Architecture du simulateur HyperFrisette:
 	 * 
+	 * on va organiser tout le logiciel autour d'un pattern mvc:
 	 * - pattern mvc:
 	 *   - on va avoir un gros bordel ferroviere, avec des sillions (la partie la plus importante du truc),
 	 *      des lignes, des garres, des trains, et des sous.
