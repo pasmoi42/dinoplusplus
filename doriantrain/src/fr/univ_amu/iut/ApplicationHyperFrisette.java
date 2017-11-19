@@ -85,7 +85,11 @@ public class ApplicationHyperFrisette {
 	public static void main(String[] args) {
 		
 		test_viteuf1();
+		//mettre en place le modele: Initialiser tous les trucs par defaut qui doivent toujours exister.
 		
+		// demarrer l'affichage d'une ou plusieurs vues.
+		
+		// prendre en compte (en boucle?) les odres du/des controlleurs pour ... que le programme fasse quelquechose.
 
 	}
 }
