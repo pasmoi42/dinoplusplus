@@ -34,6 +34,8 @@ public class ApplicationHyperFrisette {
 	 * 
 	 */
 	
+	VueGenerique laVue;
+	
 	
 	public static void test_viteuf1() {
 		System.out.println("Plop !");
@@ -79,13 +81,41 @@ public class ApplicationHyperFrisette {
 
 		
 	}
+	
+	private void fermetureProgramme()
+	{
+		laVue.fermeAffichage();
+	}
+
+	public void monSleepDeBoucle() {
+		try
+		{
+			Thread.sleep(1000);
+		}
+		catch (Exception e) {
+			// bah ... non ... ca doit marcher!
+		}
+	}
+		
+	
+	public void boucleApplication() {
+		
+		while (true)
+		{
+			laVue.metAJourAffichage();
+			
+			monSleepDeBoucle();
+		}
+		
+	}
+		
 
 	/**
 	 * Tout le programme.
 	 * (main objet).
 	 */
 	public void lance() {
-		VueGenerique laVue;
+		
 		
 
 		//mettre en place le modele: Initialiser tous les trucs par defaut qui doivent toujours exister.
@@ -97,7 +127,7 @@ public class ApplicationHyperFrisette {
 		// prendre en compte (en boucle?) les odres du/des controlleurs pour ... que le programme fasse quelquechose.
 
 
-		
+		boucleApplication();
 		//test_viteuf1();
 	}
 
@@ -106,6 +136,7 @@ public class ApplicationHyperFrisette {
 
 		leSimulateur = new ApplicationHyperFrisette();
 		leSimulateur.lance();
+		leSimulateur.fermetureProgramme();
 	}
 }
 
