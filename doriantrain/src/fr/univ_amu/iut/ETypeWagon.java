@@ -1,0 +1,11 @@
+package fr.univ_amu.iut;
+
+public enum ETypeWagon {
+	WAGON_BETAIL,
+	WAGON_DECHET,
+	WAGON_LIQUIDE,
+	WAGON_MARCHANDISE,
+	WAGON_PASSAGER,
+	ERREUR_PAS_UN_WAGON 
+	
+}
