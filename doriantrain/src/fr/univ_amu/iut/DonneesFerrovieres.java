@@ -41,6 +41,10 @@ public class DonneesFerrovieres {
 		Gare.creeGare("Bordeaux");	
 		Gare.creeGare("Lille");	
 		Gare.creeGare("Nice");
+		Gare.creeGare("Aix-en-Provence");
+		Gare.creeGare("Tataouine-les-Bains");
+
+		LigneFerroviaire.creeUneLigne("Paris", "Lyon");
 		
 	}
 
