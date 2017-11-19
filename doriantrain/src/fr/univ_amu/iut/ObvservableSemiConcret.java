@@ -36,9 +36,9 @@ public abstract class ObvservableSemiConcret implements Observable {
 	}
 
 	@Override
-	public void notifierObservateurs() {
+	public void notifierObservateurs(EFonctionaliteAAfficher f) {
 		for (ObservateurDeCommande unObservateur : lesObservateurs) {
-			unObservateur.mettreAJour();
+			unObservateur.mettreAJour(f);
 		}
 		
 	}

@@ -7,7 +7,7 @@ import java.util.Collection;
 public class EntrepriseFerroviaireAnimaux extends EntrepriseFerroviaire {
     Collection<WagonBetail> listeWagon = new ArrayList<WagonBetail>();
 
-    public EntrepriseFerroviaireAnimaux(FabriqueEntreprise categorie, String nom, String siren, int numero) {
+    public EntrepriseFerroviaireAnimaux(ECategorieEntreprise categorie, String nom, String siren, int numero) {
         super(categorie, nom, siren, numero);
     }
 }

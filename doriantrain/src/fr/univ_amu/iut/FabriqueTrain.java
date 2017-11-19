@@ -1,7 +1,5 @@
 package fr.univ_amu.iut;
 
-import java.util.Collection;
-import java.util.LinkedList;
 
 public class FabriqueTrain {
 

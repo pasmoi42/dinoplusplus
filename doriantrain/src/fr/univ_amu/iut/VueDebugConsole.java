@@ -17,8 +17,7 @@ public class VueDebugConsole implements VueGenerique {
 	}
 
 	@Override
-	public void metAJourAffichage() {
-		// TODO Auto-generated method stub
+	public void metAJourAffichage() { 
 		System.out.println("#####################");
 		System.out.println("# Nouvel affichage: #");
 		System.out.println("#####################");
@@ -43,7 +42,6 @@ public class VueDebugConsole implements VueGenerique {
 
 	@Override
 	public void fermeAffichage() {
-		// TODO Auto-generated method stub
 		System.out.println("############");
 		System.out.println("# bye bye! #");
 		System.out.println("############");
@@ -56,15 +54,35 @@ public class VueDebugConsole implements VueGenerique {
 	 * clavier.
 	 */
 	@Override
-	public void mettreAJour() {
-		// TODO Auto-generated method stub
-		System.out.println("#####################");
-		System.out.println("# Ze super Menu:    #");
-		System.out.println("#####################");
-		System.out.println("1) Le choix 1");
-		System.out.println("2) Le choix 2");
-		System.out.println("3) Le choix 3");
-		System.out.println("4) Le choix 4");
-		System.out.println("D) La réponse D ...");
+	public void mettreAJour(EFonctionaliteAAfficher f) {
+		
+		switch (f) {
+		case VUE_MENU_PRINCIPAL:
+			System.out.println("#####################");
+			System.out.println("# Ze super Menu:    #");
+			System.out.println("#####################");
+			System.out.println("1) Le choix 1");
+			System.out.println("2) Creer une entreprise");
+			System.out.println("3) Le choix 3");
+			System.out.println("4) Le choix 4");
+			System.out.println("D) La réponse D ...");
+			break;
+		case VUE_MENU_CREER_ENTREPRISE:
+			System.out.println("###################################");
+			System.out.println("# Sous menu: creer entreprise:    #");
+			System.out.println("###################################");
+			System.out.println("  Entrer le nom d'entreprise, puis entrer,");
+			System.out.println("2) Creer une entreprise");
+			System.out.println("3) Le choix 3");
+			System.out.println("4) Le choix 4");
+			System.out.println("D) La réponse D ...");
+			break;
+
+		default:
+			//ERR_RIEN
+			// Donc on n'affiche rien ...
+			break;
+		}		
+		
 	}
 }

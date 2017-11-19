@@ -33,7 +33,7 @@ public class VueEnsembleReseau  implements VueGenerique {
 	}
 
 	@Override
-	public void mettreAJour() {
+	public void mettreAJour(EFonctionaliteAAfficher f) {
 		// TODO Auto-generated method stub
 		
 	}

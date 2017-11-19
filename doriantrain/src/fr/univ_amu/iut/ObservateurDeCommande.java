@@ -7,6 +7,6 @@ public interface ObservateurDeCommande {
 	/**
 	 * callback du listener
 	 */
-	public void mettreAJour();
+	public void mettreAJour(EFonctionaliteAAfficher f);
 	
 }

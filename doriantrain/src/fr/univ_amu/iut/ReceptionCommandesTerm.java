@@ -4,6 +4,15 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 
+ * Permet d'obtenir les actions a faire, depuis un choix de 
+ * l'utilisateur, dans un menu dans le terminal.
+ * 
+ * @author Dorian
+ *
+ */
+
 public class ReceptionCommandesTerm extends ObvservableSemiConcret implements ReceptionCommandes {
 
 	public ReceptionCommandesTerm() {
@@ -29,14 +38,14 @@ public class ReceptionCommandesTerm extends ObvservableSemiConcret implements Re
 	public void obtiensActionSuivanteAFaire() {
 		String choix;
 		
-		this.notifierObservateurs();
+		this.notifierObservateurs(EFonctionaliteAAfficher.VUE_MENU_PRINCIPAL);
 		choix = faitLaLecture();
 		switch (choix) {
 		case "1":
 			System.out.println("Vous avez choisis 1");
 			break;
-		case "2":
-			
+		case "2": //Creer une entreprise
+			this.notifierObservateurs(EFonctionaliteAAfficher.VUE_MENU_PRINCIPAL);
 			break;
 		case "3":
 			

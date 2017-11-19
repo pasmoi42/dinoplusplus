@@ -8,6 +8,6 @@ public interface Observable {
 	
 	public void enregistrerObservateur(ObservateurDeCommande observateur);
 	public void supprimerObservateur(ObservateurDeCommande observateur);
-	public void notifierObservateurs();
+	public void notifierObservateurs(EFonctionaliteAAfficher f);
 
 }
