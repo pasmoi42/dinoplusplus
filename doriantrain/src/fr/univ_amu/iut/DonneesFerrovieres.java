@@ -11,7 +11,7 @@ import java.util.LinkedList;
  *
  */
 public class DonneesFerrovieres {
-	
+	double heureActuelle;
 	LinkedList<Gare> toutesLesGares;
 	LinkedList<LigneFerroviaire> toutesLesLignes;
 	LinkedList<EntrepriseFerroviaire> toutesLesEntreprises;
@@ -22,6 +22,7 @@ public class DonneesFerrovieres {
 		toutesLesLignes = new LinkedList<LigneFerroviaire>();		
 		toutesLesEntreprises = new LinkedList<EntrepriseFerroviaire>();
 		tousLesTrains = new LinkedList<Train>();
+		heureActuelle = 0;
 	}
 	
 	private static DonneesFerrovieres leSeulEtUniqueModele = null;
@@ -118,8 +119,11 @@ public class DonneesFerrovieres {
 		return null;
 	}
 	
-	
 
+	public static double getHeureActuelle()
+	{
+		return DonneesFerrovieres.accedeAuxDonnees().heureActuelle;
+	}
   
 	public Train ajouteUnTrainAuReseau(Train nouvTrain) {
 		

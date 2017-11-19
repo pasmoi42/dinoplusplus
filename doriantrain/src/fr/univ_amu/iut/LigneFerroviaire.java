@@ -5,7 +5,7 @@ public class LigneFerroviaire  {
 	private static final int NB_SILLON = 24;
     private Gare gareDepart;
     private Gare gareArrivee;
-    Sillon[] lesSillons; //les sillons de cette ligne
+    Sillon[] lesSillons; //les sillons de cette ligne    
     
     private void creeSillons(int coutBase)
     {
@@ -15,9 +15,9 @@ public class LigneFerroviaire  {
         for (i=NB_SILLON-1 ; i >= 0; --i)
         {
         	if (i > 10 && i < 22)
-        		lesSillons[i] = new Sillon(i, coutBase*2); //heures pleinnes: double tarif
+        		lesSillons[i] = new Sillon(i, coutBase*2, this); //heures pleinnes: double tarif
         	else
-        		lesSillons[i] = new Sillon(i, coutBase);  //heures creuses: simple tarif
+        		lesSillons[i] = new Sillon(i, coutBase, this);  //heures creuses: simple tarif
 		}
     }
     

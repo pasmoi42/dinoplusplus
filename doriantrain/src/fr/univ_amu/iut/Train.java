@@ -9,12 +9,21 @@ public abstract class Train {
     private Collection<Wagon> wagons = new LinkedList<>();
     private int idUniqueDuTrain; //un num unique pour savoir quel train c'est ... // lecture seule
     
-    private LinkedList<Sillon> lesReservations; //reference sur sillon reserves, pour que ca soit pratique de faire rouler le train
-
+    private LinkedList<Sillon> lesReservations; //reference sur sillon reserves, pour que ca soit pratique de faire rouler le train    
+    
+    private EEtatTrain etatActuel;
+    private Sillon positionActuelle; // 
+    public double progressionDansLeSillon;
+    String nomGare;    
+    
+    
     public Train() {
     	idUniqueDuTrain = compteurNouveauTrain;
     	++compteurNouveauTrain;
     	lesReservations = new LinkedList<Sillon>();
+    	positionActuelle = null;
+    	progressionDansLeSillon = 0;
+    	nomGare = "";
 	}
     
     public int getIdUnique() { //un getteur mais surtout pas de setter, car lecture seule!
@@ -58,6 +67,38 @@ public abstract class Train {
     	return trainEnTexte;
     }
     
+    public Sillon aUneReservationALHeure(double h)
+    {
+    	for (Sillon sillon : lesReservations) {
+			if (sillon.heure < h && sillon.heure+1 > h)
+				return sillon;
+		}
+    	return null;
+    }
+    
+    public void placeTrainSillon(Sillon s, double avancement)
+    {
+    	etatActuel = EEtatTrain.TRAIN_AVANCE_SILLON;
+    	positionActuelle = s;
+    	progressionDansLeSillon = avancement;
+    	nomGare = "";
+    }
+    
+    public void placeTrainGare(String paramNomGare)    
+    {
+    	nomGare = paramNomGare;
+    	etatActuel = EEtatTrain.TRAIN_ARRET_GARE;
+    	positionActuelle = null;
+    	progressionDansLeSillon = 0;    	
+    }
+    
+    public void sortTrainDuReseau()    
+    {
+    	nomGare = "";
+    	etatActuel = EEtatTrain.TRAIN_HORS_RESEAU;
+    	positionActuelle = null;
+    	progressionDansLeSillon = 0;    	
+    }
     
     public abstract void getCout ();
     

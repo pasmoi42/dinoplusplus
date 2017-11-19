@@ -11,14 +11,16 @@ public class Sillon
 	private int coututilisation;
 	private boolean etatIncident;
 	int heure;
+	LigneFerroviaire ligneDeCeSillon;
 
-	public Sillon(int paramHeure, int cout) {
+	public Sillon(int paramHeure, int cout, LigneFerroviaire aQuiIlAppartient) {
 		libre = true;
 		leTrainQuiOccupeCeSillon = null;
 		coututilisation = cout;
 		etatIncident = false;
 		position = -1;
 		heure = paramHeure;
+		ligneDeCeSillon = aQuiIlAppartient;
 	}
 	
 	public boolean estLibre()

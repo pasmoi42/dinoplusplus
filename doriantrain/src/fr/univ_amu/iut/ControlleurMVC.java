@@ -43,7 +43,49 @@ public class ControlleurMVC {
 
 	
 	//TODO: lance la simulation:
+	
+	public void initSimulation()
+	{
+		Sillon reservation;
+		
+		for (Train t : DonneesFerrovieres.accedeAuxDonnees().tousLesTrains) {
+			reservation = t.aUneReservationALHeure(DonneesFerrovieres.getHeureActuelle());
+			if (reservation != null)
+			{
+				t.placeTrainSillon(reservation, 0);
+			}
+		}
+	}
+	
+	
 	//TODO: faire avancer la simulation de n temps.
+	/**
+	 * 
+	 * @param temps pourcentage d'une heure. Par exemple la valeur "0.5" correspond a 30 minutes.
+	 */
+	public void avanceSimulation(double temps)
+	{
+		Sillon reservation;
+		double avancement;
+		
+		for (Train t : DonneesFerrovieres.accedeAuxDonnees().tousLesTrains) {
+			reservation = t.aUneReservationALHeure(DonneesFerrovieres.getHeureActuelle());
+			if (reservation != null)
+			{
+				avancement = t.progressionDansLeSillon;
+				avancement += temps;
+				if (avancement >= 1) //alors il a passe plus d'une heure dans le sillon
+				{
+					t.placeTrainGare(reservation.ligneDeCeSillon.getGareArrivee().getNom());					
+				}
+				else
+				{
+					t.placeTrainSillon(reservation, avancement);
+				}
+				
+			}
+		}
+	}
 	
 	//TODO: quand un train sort d'un sillon, rajouter une facture d'utilisation de ce sillon a la liste des factures.
 	
