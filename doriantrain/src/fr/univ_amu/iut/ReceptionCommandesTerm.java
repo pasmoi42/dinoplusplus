@@ -33,7 +33,7 @@ public class ReceptionCommandesTerm extends ObvservableSemiConcret implements Re
 		choix = faitLaLecture();
 		switch (choix) {
 		case "1":
-			
+			System.out.println("Vous avez choisis 1");
 			break;
 		case "2":
 			
@@ -43,6 +43,10 @@ public class ReceptionCommandesTerm extends ObvservableSemiConcret implements Re
 			break;
 		case "4":
 			
+			break;
+
+		case "D":
+			System.out.println("Vous etes fan de gad elmaleh");
 			break;
 
 		default:
