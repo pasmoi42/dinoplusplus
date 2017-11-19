@@ -31,6 +31,11 @@ public class VueDebugConsole implements VueGenerique {
 			System.out.print("    ");
 			System.out.println(uneLigne);
 		}
+		System.out.println("  Liste des Entreprises: ");
+		for (EntrepriseFerroviaire uneEnt : DonneesFerrovieres.accedeAuxDonnees().toutesLesEntreprises) {
+			System.out.print("    ");
+			System.out.println(uneEnt);
+		}
 		
 		
 		System.out.println("...");
@@ -72,12 +77,13 @@ public class VueDebugConsole implements VueGenerique {
 			System.out.println("# Sous menu: creer entreprise:    #");
 			System.out.println("###################################");
 			System.out.println("  Entrer le nom d'entreprise, puis entrer,");
-			System.out.println("2) Creer une entreprise");
+			System.out.println("  puis entrer la categorie de l'entreprise (passagers ou animaux ou cargo)");
+			System.out.println("  puis entrer le numero de l'entreprise");
+			System.out.println("  puis entrer le siren de l'entreprise");
 			System.out.println("3) Le choix 3");
 			System.out.println("4) Le choix 4");
 			System.out.println("D) La réponse D ...");
 			break;
-
 		default:
 			//ERR_RIEN
 			// Donc on n'affiche rien ...

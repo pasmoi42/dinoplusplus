@@ -10,4 +10,12 @@ public class EntrepriseFerroviaireAnimaux extends EntrepriseFerroviaire {
     public EntrepriseFerroviaireAnimaux(ECategorieEntreprise categorie, String nom, String siren, int numero) {
         super(categorie, nom, siren, numero);
     }
+    
+    
+   
+       
+    
+    
+    
+
 }

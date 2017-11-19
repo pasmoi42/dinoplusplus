@@ -14,10 +14,12 @@ public class DonneesFerrovieres {
 	
 	LinkedList<Gare> toutesLesGares;
 	LinkedList<LigneFerroviaire> toutesLesLignes;
+	LinkedList<EntrepriseFerroviaire> toutesLesEntreprises;
 	
 	private DonneesFerrovieres() {
 		toutesLesGares = new LinkedList<Gare>();
-		toutesLesLignes = new LinkedList<LigneFerroviaire>();				
+		toutesLesLignes = new LinkedList<LigneFerroviaire>();		
+		toutesLesEntreprises = new LinkedList<EntrepriseFerroviaire>();
 	}
 	
 	private static DonneesFerrovieres leSeulEtUniqueModele = null;
@@ -76,14 +78,27 @@ public class DonneesFerrovieres {
 					uneLigne.getGareArrivee().estLaMemeGare(nouvelleLigne.getGareArrivee().getNom())	)
 			{
 				return uneLigne;
-			}
-			
-		}
-		
-		
-		toutesLesLignes.addLast(nouvelleLigne);
-		
+			}			
+		}				
+		toutesLesLignes.addLast(nouvelleLigne);		
 		return nouvelleLigne;
+	}
+	
+
+    /**
+     * Si la ligne n'existe pas encore dans le reseau, ca l'y ajoute.
+     * Sinon, ca retourne la ligne existante 
+     */
+	public EntrepriseFerroviaire ajouteUneEntrepriseAuReseau(EntrepriseFerroviaire nouvelleEnt) {
+		
+		for (EntrepriseFerroviaire uneEnt : toutesLesEntreprises) {
+			if (uneEnt.getSiren().equalsIgnoreCase(nouvelleEnt.getSiren()))
+			{
+				return uneEnt;
+			}			
+		}				
+		toutesLesEntreprises.addLast(nouvelleEnt);		
+		return nouvelleEnt;
 	}
 
 

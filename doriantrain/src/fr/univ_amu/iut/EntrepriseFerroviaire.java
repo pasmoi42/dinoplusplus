@@ -1,16 +1,41 @@
 package fr.univ_amu.iut;
 
-public class EntrepriseFerroviaire {
+public abstract class EntrepriseFerroviaire {
     private ECategorieEntreprise categorie;
-    private String nom,siren;
+    private String nom;
+    private String siren; //numero d'identification unique du "Systeme d'identification du repertoire des entreprises n"
     private int numero;
 
-    public EntrepriseFerroviaire(ECategorieEntreprise categorie, String nom, String siren, int numero){
+    protected EntrepriseFerroviaire(ECategorieEntreprise categorie, String nom, String siren, int numero){
         this.categorie=categorie;
         this.nom=nom;
         this.numero=numero;
         this.siren=siren;
     }
+    
+    public static EntrepriseFerroviaire creeEntreprise(ECategorieEntreprise categorie, String nom, String siren, int numero) {
+    	EntrepriseFerroviaire laNouvEnt;
+    	
+    	laNouvEnt = null;
+    	switch (categorie) {
+    	case ENT_ANIMAUX:
+    		laNouvEnt = new EntrepriseFerroviaireAnimaux(categorie, nom, siren, numero);
+    		break;
+    	case ENT_CARGO:
+    		laNouvEnt = new EntrepriseFerroviaireCargo(categorie, nom, siren, numero);
+    		break;
+    	case ENT_PASSAGERS:
+    		laNouvEnt = new EntrepriseFerroviairePassagers(categorie, nom, siren, numero);
+    		break;
+    	default:
+    		// erreur: type d'entreprise inconnu.
+    		laNouvEnt = null;
+    		break;
+    	}
+    	    	
+    	laNouvEnt = DonneesFerrovieres.accedeAuxDonnees().ajouteUneEntrepriseAuReseau(laNouvEnt);
+    	return laNouvEnt;
+	}
 
     @Override
     public String toString() {
@@ -34,4 +59,11 @@ public class EntrepriseFerroviaire {
 		}
     	return "erreur";
     }
+    
+    public String getSiren()
+    {
+    	return siren;
+    }
+    
+    
 }

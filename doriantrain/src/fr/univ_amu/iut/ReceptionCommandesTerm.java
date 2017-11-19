@@ -33,6 +33,53 @@ public class ReceptionCommandesTerm extends ObvservableSemiConcret implements Re
 		}
 		return ret;
 	}
+	
+	private ECategorieEntreprise inputCategorieToEnum(String nomCat)
+	{
+		switch (nomCat) {
+		case "animaux":
+			return ECategorieEntreprise.ENT_ANIMAUX;
+		case "cargo":
+			return ECategorieEntreprise.ENT_CARGO;
+		case "passagers":
+			return ECategorieEntreprise.ENT_PASSAGERS;		
+		default:
+			//erreur: mauvaise entree.
+			//TODO: faire une jolie exception
+			System.err.println("erreur: pas une categorie valide");
+			System.exit(-1);
+			break;
+		}	
+		return null;
+	}
+	
+	private int stringToInt(String num)
+	{
+		return Integer.parseInt(num);
+	}
+	
+	private void litDonnesEntreprise()
+	{
+		String nomEntreprise;
+		String categorie;
+		ECategorieEntreprise eCat;
+		String numero;
+		int iNum;
+		String siren;
+		
+		//lecture nomEntreprise
+		nomEntreprise = faitLaLecture();
+		//lecture categorie
+		categorie = faitLaLecture();
+		eCat = inputCategorieToEnum(categorie);
+		//lecture numero
+		numero = faitLaLecture();
+		iNum = stringToInt(numero);		
+		//lecture siren
+		siren = faitLaLecture();
+		
+		ControlleurMVC.getSingleton().creeEntreprise(nomEntreprise, eCat, iNum, siren);
+	}
 
 	@Override
 	public void obtiensActionSuivanteAFaire() {
@@ -44,8 +91,9 @@ public class ReceptionCommandesTerm extends ObvservableSemiConcret implements Re
 		case "1":
 			System.out.println("Vous avez choisis 1");
 			break;
-		case "2": //Creer une entreprise
-			this.notifierObservateurs(EFonctionaliteAAfficher.VUE_MENU_PRINCIPAL);
+		case "2": //Creer une entreprise			
+			this.notifierObservateurs(EFonctionaliteAAfficher.VUE_MENU_CREER_ENTREPRISE);
+			litDonnesEntreprise();
 			break;
 		case "3":
 			
