@@ -2,7 +2,7 @@ package fr.univ_amu.iut;
 
 public class Sillon 
 {
-	private static final int COUT_PAR_DEFAULT = 50;
+	//private static final int COUT_PAR_DEFAULT = 50;
 	
 	private boolean libre;
 	private Train leTrainQuiOccupeCeSillon;
@@ -12,10 +12,10 @@ public class Sillon
 	private boolean etatIncident;
 	int heure;
 
-	public Sillon(int paramHeure) {
+	public Sillon(int paramHeure, int cout) {
 		libre = true;
 		leTrainQuiOccupeCeSillon = null;
-		coututilisation = COUT_PAR_DEFAULT;
+		coututilisation = cout;
 		etatIncident = false;
 		position = -1;
 		heure = paramHeure;

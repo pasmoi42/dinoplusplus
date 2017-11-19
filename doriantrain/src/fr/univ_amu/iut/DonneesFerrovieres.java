@@ -49,7 +49,7 @@ public class DonneesFerrovieres {
 		Gare.creeGare("Aix-en-Provence");
 		Gare.creeGare("Tataouine-les-Bains");
 
-		LigneFerroviaire.creeUneLigne("Paris", "Lyon");
+		LigneFerroviaire.creeUneLigne("Paris", "Lyon", 5);
 		
 	}
 

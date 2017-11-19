@@ -41,7 +41,9 @@ public class VueDebugConsole implements VueGenerique {
 					System.out.print(s.heure);
 					System.out.print("-");
 					System.out.print(s.heure+1);
-					System.out.print(" heure, reserve par le train numero: ");
+					System.out.print(" heure, cout: ");
+					System.out.print(s.getCoututilisation());
+					System.out.print(", reserve par le train numero: ");
 					System.out.print(s.getTrain().getIdUnique());
 					System.out.println();
 				}

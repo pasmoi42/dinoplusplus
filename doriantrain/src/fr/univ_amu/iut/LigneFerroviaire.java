@@ -7,14 +7,17 @@ public class LigneFerroviaire  {
     private Gare gareArrivee;
     Sillon[] lesSillons; //les sillons de cette ligne
     
-    private void creeSillons()
+    private void creeSillons(int coutBase)
     {
     	int i;
     	
     	lesSillons = new Sillon[NB_SILLON];
         for (i=NB_SILLON-1 ; i >= 0; --i)
         {
-        	lesSillons[i] = new Sillon(i);
+        	if (i > 10 && i < 22)
+        		lesSillons[i] = new Sillon(i, coutBase*2); //heures pleinnes: double tarif
+        	else
+        		lesSillons[i] = new Sillon(i, coutBase);  //heures creuses: simple tarif
 		}
     }
     
@@ -25,18 +28,18 @@ public class LigneFerroviaire  {
     	return lesSillons[i];
     }
     
-    private LigneFerroviaire (Gare d, Gare a)
+    private LigneFerroviaire (Gare d, Gare a, int coutBase)
     {  		
         this.gareDepart = d;
         this.gareArrivee = a;
-        creeSillons();
+        creeSillons(coutBase);
     }
 
-    private LigneFerroviaire (String gareD, String gareA)
+    private LigneFerroviaire (String gareD, String gareA, int coutBase)
     {    	
     	this.gareDepart = Gare.creeGare(gareD);
     	this.gareArrivee = Gare.creeGare(gareA);
-    	creeSillons();
+    	creeSillons(coutBase);
     }
 
     public Gare getGareArrivee() {
@@ -56,11 +59,11 @@ public class LigneFerroviaire  {
      * Si la ligne n'existe pas encore, ca la cree et l'ajoute au reseau
      * Sinon, ca retourne la ligne existante 
      */
-    public static LigneFerroviaire creeUneLigne(String gareD, String gareA)
+    public static LigneFerroviaire creeUneLigne(String gareD, String gareA, int coutBase)
     {
     	LigneFerroviaire nouvelleLigne;
     	
-    	nouvelleLigne = new LigneFerroviaire (gareD, gareA);
+    	nouvelleLigne = new LigneFerroviaire (gareD, gareA, coutBase);
     	nouvelleLigne =  DonneesFerrovieres.accedeAuxDonnees().ajouteUneLigneAuReseau(nouvelleLigne);    	
     	return nouvelleLigne;
     }

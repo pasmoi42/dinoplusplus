@@ -25,9 +25,7 @@ public class ReceptionCommandesAuto extends ObvservableSemiConcret implements Re
 
 	}
 	
-	@Override
-	public void obtiensActionSuivanteAFaire() {
-				
+	public void scenario1() {		
 		++iter;
 		switch (iter) {
 		case 1:
@@ -51,8 +49,35 @@ public class ReceptionCommandesAuto extends ObvservableSemiConcret implements Re
 
 		default:
 			break;
-		}
+		}		
+	}
+	
+	public void scenario2() {		
+		++iter;
+		switch (iter) {
+		case 1:
+			plopRails = EntrepriseFerroviaire.creeEntreprise(ECategorieEntreprise.ENT_PASSAGERS, "PlopRails", "S1r3n", 1);
+			Train.creeTrain("S1r3n", 5, 5, 5, 5, ETypeWagon.WAGON_PASSAGER, 3);
+			trainHuitW = Train.creeTrain("S1r3n", 5, 5, 5, 5, ETypeWagon.WAGON_PASSAGER, 8);
+			Train.creeTrain("S1r3n", 5, 5, 5, 10, ETypeWagon.WAGON_PASSAGER, 1);
+			break;
+		case 2:
 		
+			LigneFerroviaire ligne;
+
+			ligne = DonneesFerrovieres.accedeAuxDonnees().toutesLesLignes.getFirst();
+			plopRails.demandeUneReservationDeSillon(trainHuitW, ligne, 12);
+			break;
+
+		default:
+			break;
+		}		
+	}
+		
+	
+	@Override
+	public void obtiensActionSuivanteAFaire() {
+		scenario2();
 	}
 
 }
