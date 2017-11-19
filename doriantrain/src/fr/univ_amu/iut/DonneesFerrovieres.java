@@ -13,9 +13,11 @@ import java.util.LinkedList;
 public class DonneesFerrovieres {
 	
 	LinkedList<Gare> toutesLesGares;
+	LinkedList<LigneFerroviaire> toutesLesLignes;
 	
 	private DonneesFerrovieres() {
 		toutesLesGares = new LinkedList<Gare>();
+		toutesLesLignes = new LinkedList<LigneFerroviaire>();
 	}
 	
 	private static DonneesFerrovieres leSeulEtUniqueModele = null;
@@ -56,6 +58,23 @@ public class DonneesFerrovieres {
 		
 		toutesLesGares.addLast(laNouvelleGare);
 		return laNouvelleGare;
+	}
+
+	public LigneFerroviaire ajouteUneLigneAuReseau(LigneFerroviaire nouvelleLigne) {
+		
+		for (LigneFerroviaire uneLigne : toutesLesLignes) {
+			if (uneLigne.getGareDepart().estLaMemeGare(nouvelleLigne.getGareDepart().getNom()) &&
+					uneLigne.getGareArrivee().estLaMemeGare(nouvelleLigne.getGareArrivee().getNom())	)
+			{
+				return uneLigne;
+			}
+			
+		}
+		
+		
+		toutesLesLignes.addLast(nouvelleLigne);
+		
+		return nouvelleLigne;
 	}
 
 

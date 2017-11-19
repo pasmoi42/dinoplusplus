@@ -31,7 +31,7 @@ public class Gare {
     	Gare laGare;
     	
     	laGare = new Gare(nomGare);
-    	DonneesFerrovieres.accedeAuxDonnees().ajouteUneGareAuReseau(laGare);
+    	laGare = DonneesFerrovieres.accedeAuxDonnees().ajouteUneGareAuReseau(laGare);
     	return laGare;
 	}
         
