@@ -1,6 +1,6 @@
 package fr.univ_amu.iut;
 
-public class TrainBetail implements FabriqueTrain {
+public class TrainBetail extends Train {
     private int taille = 0,longueur = 0, largeur = 0;
     //private EntrepriseFerroviaire proprietaire;
 

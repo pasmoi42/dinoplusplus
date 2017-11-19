@@ -1,6 +1,6 @@
 package fr.univ_amu.iut;
 
-public class FabriqueTrain extends Train {
+public class FabriqueTrain {
 
     public static Train getNouveauTrainBetail () {
         Train trainBetail;
