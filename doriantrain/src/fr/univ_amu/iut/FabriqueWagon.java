@@ -54,7 +54,7 @@ public class FabriqueWagon {
     public Wagon getNouveauWagonPassager (){
         Wagon wagonPassager;
 
-        wagonPassager = new WagonPassager();
+        wagonPassager = new WagonBetail();
         wagonPassager.setCoutUnitaire(coutWagonPassager);
 
         return wagonPassager;
