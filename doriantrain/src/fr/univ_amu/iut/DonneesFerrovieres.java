@@ -41,11 +41,12 @@ public class DonneesFerrovieres {
 	}
 
 
-	private void creeUneGare(String nomGare) {
+	public Gare creeUneGare(String nomGare) {
 		Gare g;
 		
 		g = new Gare(nomGare);
 		toutesLesGares.addLast(g);
+		return g;
 	}
 
 }

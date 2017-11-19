@@ -13,8 +13,8 @@ public class LigneFerroviaire  {
 
     public LigneFerroviaire (String gareD, String gareA)
     {
-        this.gareDepart = new Gare(gareD);
-        this.gareArrivee = new Gare(gareA);
+    	this.gareDepart = DonneesFerrovieres.accedeAuxDonnees().creeUneGare(gareD);
+    	this.gareArrivee = DonneesFerrovieres.accedeAuxDonnees().creeUneGare(gareA);
     }
 
     public Gare getGareArrivee() {
