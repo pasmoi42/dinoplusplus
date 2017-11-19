@@ -15,6 +15,7 @@ public abstract class Train {
     public Sillon positionActuelle; // 
     public double progressionDansLeSillon;
     String nomGare;    
+    double coutObtenuDuTrain;
     
     
     public Train() {
@@ -25,6 +26,7 @@ public abstract class Train {
     	progressionDansLeSillon = 0;
     	nomGare = "";
     	etatActuel = EEtatTrain.TRAIN_HORS_RESEAU;
+    	coutObtenuDuTrain = 0;
 	}
     
     public int getIdUnique() { //un getteur mais surtout pas de setter, car lecture seule!
@@ -88,6 +90,12 @@ public abstract class Train {
     
     public void placeTrainGare(String paramNomGare)    
     {
+    	if (etatActuel == EEtatTrain.TRAIN_AVANCE_SILLON)
+    	{
+    		//donc a on fini ce sillon, donc on peut l'ajouter au cout du train
+    		coutObtenuDuTrain += positionActuelle.getCoututilisation() * wagons.size();
+    	}
+    	
     	nomGare = paramNomGare;
     	etatActuel = EEtatTrain.TRAIN_ARRET_GARE;
     	positionActuelle = null;
@@ -102,7 +110,10 @@ public abstract class Train {
     	progressionDansLeSillon = 0;    	
     }
     
-    public abstract void getCout ();
+    public double getCout ()
+    {
+    	return coutObtenuDuTrain;
+    }
     
     
     private static int compteurNouveauTrain = 0;

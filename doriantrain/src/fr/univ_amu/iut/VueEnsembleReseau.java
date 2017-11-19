@@ -74,7 +74,35 @@ public class VueEnsembleReseau  implements VueGenerique {
 
 	@Override
 	public void mettreAJour(EFonctionaliteAAfficher f) {
-		// rien a faire pour cette vue.
-		
+		// rien a faire pour cette vue ... en general ...
+
+		if (f == EFonctionaliteAAfficher.VUE_AFFICHE_COUTS_TRAIN)
+		{
+			for (Train unTrain : DonneesFerrovieres.accedeAuxDonnees().tousLesTrains) {
+				System.out.print("    ");
+				System.out.println(unTrain);
+				System.out.print("      cout final: ");
+				System.out.println(unTrain.getCout());
+				System.out.print("      Position: ");
+				switch (unTrain.etatActuel) {
+				case TRAIN_HORS_RESEAU:
+					System.out.println("Hors du reseau HyperFrisette.");
+					break;
+				case TRAIN_ARRET_GARE:
+					System.out.print("Dans la gare: ");
+					System.out.println(unTrain.nomGare);
+					break;
+				case TRAIN_AVANCE_SILLON:
+					System.out.print("En chemin entre ");
+					System.out.print(unTrain.positionActuelle.ligneDeCeSillon.getGareDepart().getNom());
+					System.out.print(" et ");
+					System.out.print(unTrain.positionActuelle.ligneDeCeSillon.getGareArrivee().getNom());
+					System.out.print(". Avancement: ");
+					System.out.print(unTrain.progressionDansLeSillon*100);
+					System.out.println("%.");
+					break;
+				}
+			}
+		}
 	}
 }

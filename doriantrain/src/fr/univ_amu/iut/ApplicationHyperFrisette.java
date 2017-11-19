@@ -111,12 +111,13 @@ public class ApplicationHyperFrisette {
 		else
 			monInput = new ReceptionCommandesAuto();
 		monInput.enregistrerObservateur(laVue);
-		while (true)
+		while (DonneesFerrovieres.getHeureActuelle() <= 24)
 		{
 			laVue.metAJourAffichage();
 			monInput.obtiensActionSuivanteAFaire();
 			monSleepDeBoucle();
 		}
+		laVue.mettreAJour(EFonctionaliteAAfficher.VUE_AFFICHE_COUTS_TRAIN);
 		
 	}
 		
