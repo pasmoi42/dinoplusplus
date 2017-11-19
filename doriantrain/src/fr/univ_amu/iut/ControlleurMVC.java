@@ -68,6 +68,7 @@ public class ControlleurMVC {
 		Sillon reservation;
 		double avancement;
 		
+		DonneesFerrovieres.accedeAuxDonnees().heureActuelle += temps;
 		for (Train t : DonneesFerrovieres.accedeAuxDonnees().tousLesTrains) {
 			reservation = t.aUneReservationALHeure(DonneesFerrovieres.getHeureActuelle());
 			if (reservation != null)

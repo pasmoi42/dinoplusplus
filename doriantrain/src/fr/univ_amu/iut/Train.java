@@ -11,8 +11,8 @@ public abstract class Train {
     
     private LinkedList<Sillon> lesReservations; //reference sur sillon reserves, pour que ca soit pratique de faire rouler le train    
     
-    private EEtatTrain etatActuel;
-    private Sillon positionActuelle; // 
+    public EEtatTrain etatActuel;
+    public Sillon positionActuelle; // 
     public double progressionDansLeSillon;
     String nomGare;    
     
@@ -24,6 +24,7 @@ public abstract class Train {
     	positionActuelle = null;
     	progressionDansLeSillon = 0;
     	nomGare = "";
+    	etatActuel = EEtatTrain.TRAIN_HORS_RESEAU;
 	}
     
     public int getIdUnique() { //un getteur mais surtout pas de setter, car lecture seule!

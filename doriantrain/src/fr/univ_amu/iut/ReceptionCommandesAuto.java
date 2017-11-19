@@ -69,7 +69,14 @@ public class ReceptionCommandesAuto extends ObvservableSemiConcret implements Re
 			plopRails.demandeUneReservationDeSillon(trainHuitW, ligne, 12);
 			break;
 
+		case 3:
+			ControlleurMVC.getSingleton().initSimulation();
+		case 4:
+			ControlleurMVC.getSingleton().avanceSimulation(0.5);
+
 		default:
+			ControlleurMVC.getSingleton().avanceSimulation(0.5);
+
 			break;
 		}		
 	}

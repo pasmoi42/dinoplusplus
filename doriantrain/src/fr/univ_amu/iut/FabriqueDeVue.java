@@ -17,4 +17,14 @@ public class FabriqueDeVue {
 		//TODO: enregistrer la vue
 		return laVue;
 	}
+	
+	public static VueGenerique getFabriqueEnssembleReseau() {
+		VueGenerique laVue;
+				
+		laVue = new VueEnsembleReseau();
+		laVue.initialiseAffichage();
+		
+		//TODO: enregistrer la vue
+		return laVue;
+	}
 }
