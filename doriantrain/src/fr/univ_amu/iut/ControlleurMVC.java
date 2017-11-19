@@ -35,5 +35,13 @@ public class ControlleurMVC {
 		Train.creeTrain(siren, iLarg, iLong, iTaille, iVitMax, eTypeWagon, nbWagon);
 	}
 
+	//TODO: recoit la demande d'une entreprise de mettre un train sur un sillon (et repond accepte ou reffuse).
+	
+	//TODO: calcul le cout (previsionnel) de chaque train avant de lancer.
+	
+	//TODO: lance la simulation:
+	//TODO: faire avancer la simulation de n temps.
+	
+	//TODO: quand un train sort d'un sillon, rajouter une facture d'utilisation de ce sillon a la liste des factures.
 	
 }
