@@ -1,5 +1,8 @@
 package fr.univ_amu.iut;
 
+import java.util.Collection;
+import java.util.LinkedList;
+
 public class VueDebugConsole implements VueGenerique {
 
 	@Override
@@ -68,7 +71,7 @@ public class VueDebugConsole implements VueGenerique {
 			System.out.println("#####################");
 			System.out.println("1) Le choix 1");
 			System.out.println("2) Creer une entreprise");
-			System.out.println("3) Le choix 3");
+			System.out.println("3) Creer un train");
 			System.out.println("4) Le choix 4");
 			System.out.println("D) La réponse D ...");
 			break;
@@ -76,10 +79,22 @@ public class VueDebugConsole implements VueGenerique {
 			System.out.println("###################################");
 			System.out.println("# Sous menu: creer entreprise:    #");
 			System.out.println("###################################");
-			System.out.println("  Entrer le nom d'entreprise, puis tapper entrer,");
-			System.out.println("  puis entrer la categorie de l'entreprise (passagers ou animaux ou cargo), puis tapper entrer,");
-			System.out.println("  puis entrer le numero de l'entreprise, puis tapper entrer,");
-			System.out.println("  puis entrer le siren de l'entreprise, puis tapper entrer");
+			System.out.println("  Saisir le nom d'entreprise, puis tapper entrer,");
+			System.out.println("  puis saisir la categorie de l'entreprise (passagers ou animaux ou cargo), puis tapper entrer,");
+			System.out.println("  puis saisir le numero de l'entreprise, puis tapper entrer,");
+			System.out.println("  puis saisir le siren de l'entreprise, puis tapper entrer");
+			break;
+		case VUE_MENU_CREER_TRAIN:
+			System.out.println("##############################");
+			System.out.println("# Sous menu: creer train:    #");
+			System.out.println("##############################");
+			System.out.println("  Saisir le siren de l'entreprise proprietaire du train, puis tapper entrer,");
+			System.out.println("  puis saisir la largeur du train puis tapper entrer,");
+			System.out.println("  puis saisir la longueur du train puis tapper entrer,");
+			System.out.println("  puis saisir la taille du train puis tapper entrer,");
+			System.out.println("  puis saisir la vitesseMax du train puis tapper entrer,");
+			System.out.println("  puis saisir le type de wagon du train (Wagon ...), puis tapper entrer,");
+			System.out.println("  puis saisir le nombre de wagons du train, puis tapper entrer.");
 			break;
 		default:
 			//ERR_RIEN
