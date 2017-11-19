@@ -5,4 +5,8 @@ public class TrainLiquide extends Train {
     public void getCout() {
 
     }
+    
+    public TrainLiquide() {
+		super();
+	}
 }

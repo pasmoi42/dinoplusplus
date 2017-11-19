@@ -1,7 +1,5 @@
 package fr.univ_amu.iut;
 
-import java.util.Collection;
-import java.util.LinkedList;
 
 public class VueDebugConsole implements VueGenerique {
 
@@ -93,9 +91,9 @@ public class VueDebugConsole implements VueGenerique {
 			System.out.println("  puis saisir la longueur du train puis tapper entrer,");
 			System.out.println("  puis saisir la taille du train puis tapper entrer,");
 			System.out.println("  puis saisir la vitesseMax du train puis tapper entrer,");
-			System.out.println("  puis saisir le type de wagon du train (Wagon ...), puis tapper entrer,");
+			System.out.println("  puis saisir le type de wagon du train parmis: (betail, passagers, dechet, liquide, marchandise), puis tapper entrer,");
 			System.out.println("  puis saisir le nombre de wagons du train, puis tapper entrer.");
-			break;
+			break;			
 		default:
 			//ERR_RIEN
 			// Donc on n'affiche rien ...

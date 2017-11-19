@@ -5,4 +5,8 @@ public class TrainBetail extends Train {
     public void getCout() {
 
     }
+    
+    public TrainBetail() {
+		super();
+	}
 }

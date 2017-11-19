@@ -5,4 +5,8 @@ public class TrainMarchandise extends Train {
     public void getCout() {
 
     }
+    
+    public TrainMarchandise() {
+    	super();
+    }
 }

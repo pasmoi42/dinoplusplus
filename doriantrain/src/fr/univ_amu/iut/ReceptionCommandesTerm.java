@@ -122,6 +122,7 @@ public class ReceptionCommandesTerm extends ObvservableSemiConcret implements Re
 		int iLong;
 		int iTaille;
 		int iVitMax;
+		int iNbWagons;
 
 		String nomEntreprise;
 		String typeWagon;
@@ -147,9 +148,11 @@ public class ReceptionCommandesTerm extends ObvservableSemiConcret implements Re
 		//lecture type de wagon
 		typeWagon = faitLaLecture();
 		eTypeWagon = inputTypeWagonToEnum(typeWagon);
+		//lecture du nombre de wagons:
+		iNbWagons = litSaisieInt();
 		
 		
-		ControlleurMVC.getSingleton().creeTrain(nomEntreprise, eCat, iNum, siren);
+		ControlleurMVC.getSingleton().creeTrain(siren, iLarg, iLong, iTaille, iVitMax, eTypeWagon, iNbWagons);
 		
 		
 		/*

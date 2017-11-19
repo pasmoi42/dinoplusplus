@@ -15,11 +15,13 @@ public class DonneesFerrovieres {
 	LinkedList<Gare> toutesLesGares;
 	LinkedList<LigneFerroviaire> toutesLesLignes;
 	LinkedList<EntrepriseFerroviaire> toutesLesEntreprises;
+	LinkedList<Train> tousLesTrains;
 	
 	private DonneesFerrovieres() {
 		toutesLesGares = new LinkedList<Gare>();
 		toutesLesLignes = new LinkedList<LigneFerroviaire>();		
 		toutesLesEntreprises = new LinkedList<EntrepriseFerroviaire>();
+		tousLesTrains = new LinkedList<Train>();
 	}
 	
 	private static DonneesFerrovieres leSeulEtUniqueModele = null;
@@ -86,8 +88,8 @@ public class DonneesFerrovieres {
 	
 
     /**
-     * Si la ligne n'existe pas encore dans le reseau, ca l'y ajoute.
-     * Sinon, ca retourne la ligne existante 
+     * Si l'entreprise n'existe pas encore dans le reseau, ca l'y ajoute.
+     * Sinon, ca retourne l'entreprise existante 
      */
 	public EntrepriseFerroviaire ajouteUneEntrepriseAuReseau(EntrepriseFerroviaire nouvelleEnt) {
 		
@@ -99,6 +101,36 @@ public class DonneesFerrovieres {
 		}				
 		toutesLesEntreprises.addLast(nouvelleEnt);		
 		return nouvelleEnt;
+	}
+	
+	/**
+     * Si l'entreprise n'existe pas encore dans le reseau, ca l'y ajoute.
+     * Sinon, ca retourne l'entreprise existante 
+     */
+	public EntrepriseFerroviaire getEntreprise(String siren) {
+		
+		for (EntrepriseFerroviaire uneEnt : toutesLesEntreprises) {
+			if (uneEnt.getSiren().equalsIgnoreCase(siren))
+			{
+				return uneEnt;
+			}			
+		}						
+		return null;
+	}
+	
+	
+
+  
+	public Train ajouteUnTrainAuReseau(Train nouvTrain) {
+		
+		for (Train unTrain : tousLesTrains) {
+			if (unTrain.getIdUnique() == nouvTrain.getIdUnique())
+			{
+				return unTrain;
+			}			
+		}				
+		tousLesTrains.addLast(nouvTrain);		
+		return nouvTrain;
 	}
 
 

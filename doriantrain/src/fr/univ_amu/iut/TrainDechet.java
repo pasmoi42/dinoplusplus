@@ -5,4 +5,8 @@ public class TrainDechet extends Train {
     public void getCout() {
 
     }
+    
+    public TrainDechet() {
+    	super();
+	}
 }

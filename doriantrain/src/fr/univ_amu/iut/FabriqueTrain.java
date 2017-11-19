@@ -52,7 +52,7 @@ public class FabriqueTrain {
         trainBetail.setTaille(taille);
         trainBetail.setVitesseMax(vitesseMax);
         for (int i = 0; i < nbWagon;++i){
-            trainBetail.setWagons(FabriqueWagon.getSingleton().getNouveauWagonBetail());
+            trainBetail.ajouteWagons(FabriqueWagon.getSingleton().getNouveauWagonBetail());
         }
 
         return trainBetail;
@@ -68,7 +68,7 @@ public class FabriqueTrain {
         trainPassager.setTaille(taille);
         trainPassager.setVitesseMax(vitesseMax);
         for (int i = 0; i < nbWagon;++i){
-            trainPassager.setWagons(FabriqueWagon.getSingleton().getNouveauWagonPassager());
+            trainPassager.ajouteWagons(FabriqueWagon.getSingleton().getNouveauWagonPassager());
         }
 
         return trainPassager;
@@ -85,7 +85,7 @@ public class FabriqueTrain {
         trainDechet.setTaille(taille);
         trainDechet.setVitesseMax(vitesseMax);
         for (int i = 0; i < nbWagon;++i){
-            trainDechet.setWagons(FabriqueWagon.getSingleton().getNouveauWagonDechet());
+            trainDechet.ajouteWagons(FabriqueWagon.getSingleton().getNouveauWagonDechet());
         }
 
         return trainDechet;
@@ -102,7 +102,7 @@ public class FabriqueTrain {
         trainLiquide.setTaille(taille);
         trainLiquide.setVitesseMax(vitesseMax);
         for (int i = 0; i < nbWagon;++i){
-            trainLiquide.setWagons(FabriqueWagon.getSingleton().getNouveauWagonLiquide());
+            trainLiquide.ajouteWagons(FabriqueWagon.getSingleton().getNouveauWagonLiquide());
         }
 
         return trainLiquide;
@@ -119,7 +119,7 @@ public class FabriqueTrain {
         trainMarchandise.setTaille(taille);
         trainMarchandise.setVitesseMax(vitesseMax);
         for (int i = 0; i < nbWagon;++i){
-            trainMarchandise.setWagons(FabriqueWagon.getSingleton().getNouveauWagonMarchandise());
+            trainMarchandise.ajouteWagons(FabriqueWagon.getSingleton().getNouveauWagonMarchandise());
         }
 
         return trainMarchandise;

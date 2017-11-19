@@ -6,4 +6,8 @@ public class TrainPassager extends Train {
     public void getCout() {
 
     }
+    
+    public TrainPassager() {
+    	super();
+    }
 }
