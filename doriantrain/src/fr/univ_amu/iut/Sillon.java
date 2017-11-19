@@ -37,6 +37,7 @@ public class Sillon
 	{
 		leTrainQuiOccupeCeSillon = leTrain;
 		libre = false;
+		leTrain.memoriseReservationDeSillon(this);
 	}
 	
 	public void libere()

@@ -76,7 +76,7 @@ public class ControlleurMVC {
 			
 			reservation = t.aUneReservationALHeure(DonneesFerrovieres.getHeureActuelle());
 			if (reservation != null)
-			{
+			{				
 				avancement = t.progressionDansLeSillon;
 				avancement += temps;
 				if (avancement >= 1) //alors il a passe plus d'une heure dans le sillon
