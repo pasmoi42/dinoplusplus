@@ -35,10 +35,10 @@ public class ReceptionCommandesAuto extends ObvservableSemiConcret implements Re
 			Train.creeTrain("S1r3n", 5, 5, 5, 5, ETypeWagon.WAGON_PASSAGER, 3);
 			break;
 		case 3:
-			trainHuitW = Train.creeTrain("S1r3n", 5, 5, 5, 5, ETypeWagon.WAGON_PASSAGER, 8);
+			trainHuitW = Train.creeTrain("S1r3n", 5, 5, 5, 5, ETypeWagon.WAGON_BETAIL, 8);
 			break;
 		case 4:
-			Train.creeTrain("S1r3n", 5, 5, 5, 10, ETypeWagon.WAGON_PASSAGER, 1);
+			Train.creeTrain("S1r3n", 5, 5, 5, 10, ETypeWagon.WAGON_DECHET, 1);
 			break;
 		case 5:
 			LigneFerroviaire ligne;
@@ -58,8 +58,8 @@ public class ReceptionCommandesAuto extends ObvservableSemiConcret implements Re
 		case 1:
 			plopRails = EntrepriseFerroviaire.creeEntreprise(ECategorieEntreprise.ENT_PASSAGERS, "PlopRails", "S1r3n", 1);
 			Train.creeTrain("S1r3n", 5, 5, 5, 5, ETypeWagon.WAGON_PASSAGER, 3);
-			trainHuitW = Train.creeTrain("S1r3n", 5, 5, 5, 5, ETypeWagon.WAGON_PASSAGER, 8);
-			Train.creeTrain("S1r3n", 5, 5, 5, 10, ETypeWagon.WAGON_PASSAGER, 1);
+			trainHuitW = Train.creeTrain("S1r3n", 5, 5, 5, 5, ETypeWagon.WAGON_BETAIL, 8);
+			Train.creeTrain("S1r3n", 5, 5, 5, 10, ETypeWagon.WAGON_DECHET, 1);
 			break;
 		case 2:
 		
