@@ -30,4 +30,10 @@ public class ControlleurMVC {
 		EntrepriseFerroviaire.creeEntreprise(cat, nom, siren, numero);
 	}
 	
+	public void creeTrain(String nom, ECategorieEntreprise cat, int  numero, String siren)
+	{
+		EntrepriseFerroviaire.creeEntreprise(cat, nom, siren, numero);
+	}
+
+	
 }
