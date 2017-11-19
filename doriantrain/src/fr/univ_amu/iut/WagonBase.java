@@ -7,7 +7,7 @@ package fr.univ_amu.iut;
  * C'est juste ce que tout wagon doit forcement avoir, et donc,
  * la partie commune a tous les differents types de wagons.
  * 
- * @author Dorianosore
+ * @author Dorianosaure
  *
  */
 public class WagonBase implements FabriqueWagon  {
