@@ -2,6 +2,7 @@ package fr.univ_amu.iut;
 
 public class Gare {
     private String nom;
+          
     public Gare (String nom) {
         this.nom = nom;
     }
@@ -21,4 +22,17 @@ public class Gare {
                 "nom='" + nom + '\'' +
                 '}';
     }
+    
+    public String getNom() {
+		return nom;
+	}
+    
+    public static Gare creeGare(String nomGare) {
+    	Gare laGare;
+    	
+    	laGare = new Gare(nomGare);
+    	DonneesFerrovieres.accedeAuxDonnees().ajouteUneGareAuReseau(laGare);
+    	return laGare;
+	}
+        
 }

@@ -33,7 +33,7 @@ public class DonneesFerrovieres {
 	 */
 	public static void creeUnReseau()
 	{
-		//DonneesFerrovieres.accedeAuxDonnees();
+		//Gare.creeGare("Paris");
 		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Paris");
 		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Marseille");
 		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Lyon");
@@ -59,5 +59,20 @@ public class DonneesFerrovieres {
 		toutesLesGares.addLast(g);
 		return g;
 	}
+	
+	public Gare ajouteUneGareAuReseau(Gare laNouvelleGare) {
+				
+		for (Gare uneGare : toutesLesGares) 
+		{
+			if ( uneGare.estLaMemeGare(laNouvelleGare.getNom()) )
+			{
+				return uneGare;
+			}
+		}
+		
+		toutesLesGares.addLast(laNouvelleGare);
+		return laNouvelleGare;
+	}
+
 
 }
