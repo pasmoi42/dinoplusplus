@@ -55,5 +55,4 @@ public class VueDebugConsole implements VueGenerique {
 		System.out.println("4) Le choix 4");
 		System.out.println("D) La réponse D ...");
 	}
-
 }

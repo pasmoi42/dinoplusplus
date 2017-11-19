@@ -1,5 +1,7 @@
 package fr.univ_amu.iut;
 
+import java.util.Collection;
+
 /**
  * Toutes les donnes utilisees par ce logiciel de simulation. Constitue le
  * Modele du pattern MVC autour du quel est achitecture ce logiciel.
@@ -23,5 +25,4 @@ public class DonneesFerrovieres {
 		}
 		return leSeulEtUniqueModele;
 	}
-
 }
