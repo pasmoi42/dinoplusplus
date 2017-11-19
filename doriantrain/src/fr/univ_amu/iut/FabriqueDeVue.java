@@ -5,6 +5,9 @@ package fr.univ_amu.iut;
  */
 public class FabriqueDeVue {
 
+	/**
+	 * donne un objet VueDebugConsole pret a l'emplois.
+	 */
 	public VueGenerique getFabriqueDebugConsole() {
 		VueGenerique laVue;
 				
