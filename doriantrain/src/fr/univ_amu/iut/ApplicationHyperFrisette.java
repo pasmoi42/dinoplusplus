@@ -145,7 +145,7 @@ public class ApplicationHyperFrisette {
 	public static void main(String[] args) {
 		ApplicationHyperFrisette leSimulateur;
 
-		if (args.length > 2 )
+		if (args.length > 0 )
 			MODE_ENTREE = (MODE_ENTREE==0)? 1:0;
 		leSimulateur = new ApplicationHyperFrisette();
 		leSimulateur.lance();
