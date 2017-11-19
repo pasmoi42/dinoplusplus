@@ -75,8 +75,8 @@ public class ApplicationHyperFrisette {
 		System.out.println(entrepriseFerroviaireAnimaux);
 		System.out.println(entrepriseFerroviaireCargo);
 
-		Gare gareAix = new Gare ("Aix-en-Provence");
-		Gare gareTataouineLesBains = new Gare ("Tataouine-les-Bains");
+		Gare gareAix = Gare.creeGare("Aix-en-Provence");
+		Gare gareTataouineLesBains = Gare.creeGare("Tataouine-les-Bains");
 		System.out.println(gareAix + "\n" + gareTataouineLesBains);
 
 		

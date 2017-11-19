@@ -3,7 +3,7 @@ package fr.univ_amu.iut;
 public class Gare {
     private String nom;
           
-    public Gare (String nom) {
+    private Gare (String nom) {
         this.nom = nom;
     }
 

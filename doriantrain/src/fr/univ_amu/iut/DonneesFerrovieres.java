@@ -33,33 +33,17 @@ public class DonneesFerrovieres {
 	 */
 	public static void creeUnReseau()
 	{
-		//Gare.creeGare("Paris");
-		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Paris");
-		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Marseille");
-		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Lyon");
-		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Bordeaux");	
-		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Lille");	
-		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Nice");
+		Gare.creeGare("Paris");	
+		Gare.creeGare("Marseille");
+		Gare.creeGare("Lyon");
+		Gare.creeGare("Bordeaux");	
+		Gare.creeGare("Lille");	
+		Gare.creeGare("Nice");
 		
 	}
 
 
-	public Gare creeUneGare(String nomGare) {
-		Gare g;
-				
-		for (Gare uneGare : toutesLesGares) 
-		{
-			if ( uneGare.estLaMemeGare(nomGare) )
-			{
-				return uneGare;
-			}
-		}
 		
-		g = new Gare(nomGare);
-		toutesLesGares.addLast(g);
-		return g;
-	}
-	
 	public Gare ajouteUneGareAuReseau(Gare laNouvelleGare) {
 				
 		for (Gare uneGare : toutesLesGares) 
