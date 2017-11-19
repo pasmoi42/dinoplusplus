@@ -31,6 +31,21 @@ public class VueDebugConsole implements VueGenerique {
 		for (LigneFerroviaire uneLigne : DonneesFerrovieres.accedeAuxDonnees().toutesLesLignes) {
 			System.out.print("    ");
 			System.out.println(uneLigne);
+			System.out.println("    Liste sillons reserves de cette lignes: ");
+			for (int i = 0 ; i <= 23 ; ++i)
+			{			
+				Sillon s = uneLigne.lesSillons[i];			
+				if ( ! s.estLibre() )
+				{
+					System.out.print("      Sillon: ");
+					System.out.print(s.heure);
+					System.out.print("-");
+					System.out.print(s.heure+1);
+					System.out.print(" heure, reserve par le train numero: ");
+					System.out.print(s.getTrain().getIdUnique());
+					System.out.println();
+				}
+			}
 		}
 		System.out.println("  Liste des Entreprises: ");
 		for (EntrepriseFerroviaire uneEnt : DonneesFerrovieres.accedeAuxDonnees().toutesLesEntreprises) {
@@ -42,6 +57,7 @@ public class VueDebugConsole implements VueGenerique {
 			System.out.print("    ");
 			System.out.println(unTrain);
 		}
+
 		
 		System.out.println("...");
 		System.out.println("############################");

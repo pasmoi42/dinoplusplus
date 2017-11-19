@@ -12,9 +12,9 @@ public class LigneFerroviaire  {
     	int i;
     	
     	lesSillons = new Sillon[NB_SILLON];
-        for (i=NB_SILLON-1 ; i > 0; --i)
+        for (i=NB_SILLON-1 ; i >= 0; --i)
         {
-        	lesSillons[i] = new Sillon();
+        	lesSillons[i] = new Sillon(i);
 		}
     }
     

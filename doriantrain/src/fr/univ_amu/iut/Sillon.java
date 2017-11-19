@@ -10,18 +10,25 @@ public class Sillon
 
 	private int coututilisation;
 	private boolean etatIncident;
+	int heure;
 
-	public Sillon() {
+	public Sillon(int paramHeure) {
 		libre = true;
 		leTrainQuiOccupeCeSillon = null;
 		coututilisation = COUT_PAR_DEFAULT;
 		etatIncident = false;
 		position = -1;
+		heure = paramHeure;
 	}
 	
 	public boolean estLibre()
 	{
 		return libre;
+	}
+	
+	public Train getTrain()
+	{
+		return leTrainQuiOccupeCeSillon;
 	}
 	
 	public void setTrain(Train leTrain)

@@ -36,6 +36,7 @@ public abstract class EntrepriseFerroviaire {
     	laNouvEnt = DonneesFerrovieres.accedeAuxDonnees().ajouteUneEntrepriseAuReseau(laNouvEnt);
     	return laNouvEnt;
 	}
+       
 
     @Override
     public String toString() {
@@ -68,6 +69,11 @@ public abstract class EntrepriseFerroviaire {
     public String getNom()
     {
     	return nom;
+    }
+        
+    public void demandeUneReservationDeSillon(Train t, LigneFerroviaire l, int heure)    
+    {
+    	ControlleurMVC.getSingleton().reserveSillon(t, l, heure);
     }
 
     
