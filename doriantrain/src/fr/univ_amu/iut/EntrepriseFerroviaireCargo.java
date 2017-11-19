@@ -3,11 +3,10 @@ package fr.univ_amu.iut;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class EntrepriseFerroviaireCargo implements FabriqueEntreprise {
+public class EntrepriseFerroviaireCargo extends EntrepriseFerroviaire {
     Collection<Wagon> listeWagon = new ArrayList<Wagon>();
 
-    @Override
-    public void acheterWagon(Wagon wagon) {
-
+    public EntrepriseFerroviaireCargo(FabriqueEntreprise categorie, String nom, String siren, int numero) {
+        super(categorie, nom, siren, numero);
     }
 }

@@ -4,12 +4,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 //import java.util.List;
 
-public class EntrepriseFerroviaireAnimaux implements FabriqueEntreprise {
+public class EntrepriseFerroviaireAnimaux extends EntrepriseFerroviaire {
     Collection<WagonBetail> listeWagon = new ArrayList<WagonBetail>();
 
-
-    @Override
-    public void acheterWagon(Wagon wagon) {
-
+    public EntrepriseFerroviaireAnimaux(FabriqueEntreprise categorie, String nom, String siren, int numero) {
+        super(categorie, nom, siren, numero);
     }
 }

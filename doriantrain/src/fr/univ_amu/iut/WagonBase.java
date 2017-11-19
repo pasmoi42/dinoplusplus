@@ -9,7 +9,7 @@ package fr.univ_amu.iut;
  * 
  * @author Dorianosaure
  *
- */
+
 public class WagonBase implements FabriqueWagon  {
 	
 	private double coutUnitaire;
@@ -26,3 +26,4 @@ public class WagonBase implements FabriqueWagon  {
 
 
 }
+ */

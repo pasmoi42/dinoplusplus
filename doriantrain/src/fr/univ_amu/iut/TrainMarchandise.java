@@ -1,7 +1,6 @@
 package fr.univ_amu.iut;
 
-public class TrainPassager extends Train {
-
+public class TrainMarchandise extends Train {
     @Override
     public void getCout() {
 

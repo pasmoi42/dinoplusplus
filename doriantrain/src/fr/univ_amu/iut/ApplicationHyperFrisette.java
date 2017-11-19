@@ -37,12 +37,9 @@ public class ApplicationHyperFrisette {
 	VueGenerique laVue;
 	
 	
-	public static void test_viteuf1() {
+/*	public static void test_viteuf1() {
 		System.out.println("Plop !");
-		FabriqueTrain factory = new TrainBetail();
-		Train train = new Train(factory);
-		train.creationTrain();
-        System.out.println(train);
+
 
 		FabriqueWagon factoryPassagers = new WagonPassager();
 		FabriqueWagon factoryBetail = new WagonBetail();
@@ -82,7 +79,7 @@ public class ApplicationHyperFrisette {
 		
 		Train t = FabriqueTrain.getSingleton().getNouveauTrain();
 		
-	}
+	}*/
 	
 	private void fermetureProgramme()
 	{

@@ -18,7 +18,7 @@ public class FabriqueTrain {
     	vitesseMax = 600;
 
 
-    	proprietaire = DonneesFerrovieres.accedeAuxDonnees().listeDEntrepise.getFirst();
+    	//proprietaire = DonneesFerrovieres.accedeAuxDonnees().listeDEntrepise.getFirst();
 
 
     }
@@ -30,35 +30,104 @@ public class FabriqueTrain {
     	case WAGON_BETAIL:
     		return getNouveauTrainBetail();
     	case WAGON_PASSAGER:
-
-    		break;
+            return getNouveauTrainPassager ();
     	case WAGON_DECHET:
-
-    		break;
+            getNouveauTrainDechet ();
     	case WAGON_LIQUIDE:
-
-    		break;
+            getNouveauTrainLiquide ();
     	case WAGON_MARCHANDISE:
-
-    		break;
+            getNouveauTrainMarchandise ();
 		default:
 			return null;
 			//ERREUR_PAS_UN_WAGON
 		}
-		return null;
-    	
     }
 
     public Train getNouveauTrainBetail () {
     	Train trainBetail;
 
-   
         trainBetail = new TrainBetail();
         trainBetail.setVitesseMax(vitesseMax);
-        
+        trainBetail.setLargeur(largeur);
+        trainBetail.setLongueur(longueur);
+        trainBetail.setProprietaire(proprietaire);
+        trainBetail.setTaille(taille);
+        trainBetail.setVitesseMax(vitesseMax);
+        for (int i = 0; i < nbWagon;++i){
+            trainBetail.setWagons(FabriqueWagon.getSingleton().getNouveauWagonBetail());
+        }
 
         return trainBetail;
     }
+    public Train getNouveauTrainPassager () {
+        Train trainPassager;
+
+        trainPassager = new TrainPassager();
+        trainPassager.setVitesseMax(vitesseMax);
+        trainPassager.setLargeur(largeur);
+        trainPassager.setLongueur(longueur);
+        trainPassager.setProprietaire(proprietaire);
+        trainPassager.setTaille(taille);
+        trainPassager.setVitesseMax(vitesseMax);
+        for (int i = 0; i < nbWagon;++i){
+            trainPassager.setWagons(FabriqueWagon.getSingleton().getNouveauWagonPassager());
+        }
+
+        return trainPassager;
+    }
+
+    public Train getNouveauTrainDechet () {
+        Train trainDechet;
+
+        trainDechet = new TrainDechet();
+        trainDechet.setVitesseMax(vitesseMax);
+        trainDechet.setLargeur(largeur);
+        trainDechet.setLongueur(longueur);
+        trainDechet.setProprietaire(proprietaire);
+        trainDechet.setTaille(taille);
+        trainDechet.setVitesseMax(vitesseMax);
+        for (int i = 0; i < nbWagon;++i){
+            trainDechet.setWagons(FabriqueWagon.getSingleton().getNouveauWagonDechet());
+        }
+
+        return trainDechet;
+    }
+
+    public Train getNouveauTrainLiquide () {
+        Train trainLiquide;
+
+        trainLiquide = new TrainLiquide();
+        trainLiquide.setVitesseMax(vitesseMax);
+        trainLiquide.setLargeur(largeur);
+        trainLiquide.setLongueur(longueur);
+        trainLiquide.setProprietaire(proprietaire);
+        trainLiquide.setTaille(taille);
+        trainLiquide.setVitesseMax(vitesseMax);
+        for (int i = 0; i < nbWagon;++i){
+            trainLiquide.setWagons(FabriqueWagon.getSingleton().getNouveauWagonLiquide());
+        }
+
+        return trainLiquide;
+    }
+
+    public Train getNouveauTrainMarchandise () {
+        Train trainMarchandise;
+
+        trainMarchandise = new TrainMarchandise();
+        trainMarchandise.setVitesseMax(vitesseMax);
+        trainMarchandise.setLargeur(largeur);
+        trainMarchandise.setLongueur(longueur);
+        trainMarchandise.setProprietaire(proprietaire);
+        trainMarchandise.setTaille(taille);
+        trainMarchandise.setVitesseMax(vitesseMax);
+        for (int i = 0; i < nbWagon;++i){
+            trainMarchandise.setWagons(FabriqueWagon.getSingleton().getNouveauWagonMarchandise());
+        }
+
+        return trainMarchandise;
+    }
+
+
     
     
     
