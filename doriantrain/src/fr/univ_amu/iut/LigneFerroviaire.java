@@ -25,10 +25,11 @@ public class LigneFerroviaire  {
         return gareDepart;
     }
 
+    @Override
     public String toString() {
         return "La ligne va de " + this.getGareDepart() + " à " + this.getGareArrivee();
     }
-    
+
     /**
      * Si la ligne n'existe pas encore, ca la cree et l'ajoute au reseau
      * Sinon, ca retourne la ligne existante 

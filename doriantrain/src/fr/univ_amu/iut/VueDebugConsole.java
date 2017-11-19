@@ -30,7 +30,7 @@ public class VueDebugConsole implements VueGenerique {
 		System.out.println("  Liste des lignes: ");
 		for (LigneFerroviaire uneLigne : DonneesFerrovieres.accedeAuxDonnees().toutesLesLignes) {
 			System.out.print("    ");
-			System.out.println(uneLigne.toString());
+			System.out.println(uneLigne);
 		}
 		
 		
