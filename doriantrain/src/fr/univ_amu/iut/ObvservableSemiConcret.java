@@ -1,0 +1,33 @@
+package fr.univ_amu.iut;
+
+import java.util.LinkedList;
+
+
+public class ObvservableSemiConcret implements Observable {
+
+	LinkedList<ObservateurDeCommande> lesObservateurs;
+	
+	@Override
+	public void enregistrerObservateur(ObservateurDeCommande observateur) {
+		lesObservateurs.addLast(observateur);
+	}
+
+	@Override
+	public void supprimerObservateur(ObservateurDeCommande observateur) {
+		lesObservateurs.remove(observateur);
+		/*int posObjetDansListe; 
+		
+		posObjetDansListe = lesObservateurs.indexOf(observateur);
+		if (posObjetDansListe >= 0)
+			lesObservateurs.remove(posObjetDansListe);*/		
+	}
+
+	@Override
+	public void notifierObservateurs() {
+		for (ObservateurDeCommande unObservateur : lesObservateurs) {
+			unObservateur.mettreAJour();
+		}
+		
+	}
+
+}

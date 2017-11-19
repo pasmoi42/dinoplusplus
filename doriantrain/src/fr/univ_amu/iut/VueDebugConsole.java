@@ -37,10 +37,23 @@ public class VueDebugConsole implements VueGenerique {
 		System.out.println("############");
 	}
 
+	/**
+	 * Le mettreAJour du pattern observeur qui en fait, la, 
+	 * nous demande juste de rafficher le menu pour que 
+	 * l'utilisateur puisse faire un choix d'action au 
+	 * clavier.
+	 */
 	@Override
 	public void mettreAJour() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("#####################");
+		System.out.println("# Ze super Menu:    #");
+		System.out.println("#####################");
+		System.out.println("1) Le choix 1");
+		System.out.println("2) Le choix 2");
+		System.out.println("3) Le choix 3");
+		System.out.println("4) Le choix 4");
+		System.out.println("D) La réponse D ...");
 	}
 
 }
