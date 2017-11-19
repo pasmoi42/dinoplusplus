@@ -5,6 +5,8 @@ package fr.univ_amu.iut;
  * Ce que doit faire toute "vue" (en gros tout affichage), 
  * pour fonctionner.
  * 
+ * Toutes les vues du logiciels doivent obligatoirement 
+ * implementer la presente interface: VueGenerique.
  * 
  * @author dorian
  *
