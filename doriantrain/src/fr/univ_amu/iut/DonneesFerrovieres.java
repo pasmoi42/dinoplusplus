@@ -43,17 +43,16 @@ public class DonneesFerrovieres {
 
 	public Gare creeUneGare(String nomGare) {
 		Gare g;
-		
-		g = new Gare(nomGare);
+				
 		for (Gare uneGare : toutesLesGares) 
 		{
-			if (uneGare.toString().equalsIgnoreCase(g.toString()))
+			if ( uneGare.estLaMemeGare(nomGare) )
 			{
 				return uneGare;
 			}
 		}
 		
-		
+		g = new Gare(nomGare);
 		toutesLesGares.addLast(g);
 		return g;
 	}

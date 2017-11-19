@@ -6,6 +6,10 @@ public class Gare {
         this.nom = nom;
     }
 
+    public boolean estLaMemeGare(String nomAutreGare) {
+    	return nom.equalsIgnoreCase(nomAutreGare);
+	}
+    
     @Override
     public String toString() {
         return "Gare{" +
