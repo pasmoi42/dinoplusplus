@@ -95,7 +95,7 @@ public class ApplicationHyperFrisette {
 			if (MODE_ENTREE == 0)
 				Thread.sleep(1000);
 			else
-				Thread.sleep(2000);
+				Thread.sleep(500);
 		}
 		catch (Exception e) {
 			// bah ... non ... ca doit marcher!
