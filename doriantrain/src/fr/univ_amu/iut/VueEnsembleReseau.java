@@ -27,7 +27,7 @@ public class VueEnsembleReseau  implements VueGenerique {
 		System.out.println("#################################");
 		System.out.println("# Etat de l'enssemble du Reseau #");
 		System.out.println("#################################");
-		System.out.println("#### Heure: "+ DonneesFerrovieres.accedeAuxDonnees().getHeureActuelle()+"####");
+		System.out.println("#######    Heure: "+ DonneesFerrovieres.accedeAuxDonnees().getHeureActuelle()+"    ########");
 		System.out.println("#################################");
 		System.out.println("  Liste des gares: ");
 		for (Gare uneGare : DonneesFerrovieres.accedeAuxDonnees().toutesLesGares) {

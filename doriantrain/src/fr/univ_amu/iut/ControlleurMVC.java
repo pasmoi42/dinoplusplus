@@ -70,6 +70,10 @@ public class ControlleurMVC {
 		
 		DonneesFerrovieres.accedeAuxDonnees().heureActuelle += temps;
 		for (Train t : DonneesFerrovieres.accedeAuxDonnees().tousLesTrains) {
+			reservation = t.aUneReservationALHeure(DonneesFerrovieres.getHeureActuelle()+0.99);
+			if (reservation != null)
+				t.placeTrainGare(reservation.ligneDeCeSillon.getGareDepart().getNom());
+			
 			reservation = t.aUneReservationALHeure(DonneesFerrovieres.getHeureActuelle());
 			if (reservation != null)
 			{

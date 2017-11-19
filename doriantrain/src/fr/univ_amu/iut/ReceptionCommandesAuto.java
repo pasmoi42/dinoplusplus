@@ -71,9 +71,10 @@ public class ReceptionCommandesAuto extends ObvservableSemiConcret implements Re
 
 		case 3:
 			ControlleurMVC.getSingleton().initSimulation();
+			break;
 		case 4:
 			ControlleurMVC.getSingleton().avanceSimulation(0.5);
-
+			break;
 		default:
 			ControlleurMVC.getSingleton().avanceSimulation(0.5);
 

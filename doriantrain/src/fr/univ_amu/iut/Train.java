@@ -63,15 +63,16 @@ public abstract class Train {
     	String trainEnTexte;
     	trainEnTexte = "Train "+idUniqueDuTrain+" de "+wagons.size()+" wagons de l'entreprise "+proprietaire.getNom()+" wagons:";
     	for (Wagon wagon : wagons) {
-    		trainEnTexte += "(" +wagon.getTypeStr()+ ")";
+    		trainEnTexte += "(" +wagon.getTypeStr()+ ")-";
 		}
+    	trainEnTexte += "o";
     	return trainEnTexte;
     }
     
     public Sillon aUneReservationALHeure(double h)
     {
     	for (Sillon sillon : lesReservations) {
-			if (sillon.heure < h && sillon.heure+1 > h)
+			if (sillon.heure <= h && h <= sillon.heure+1 )
 				return sillon;
 		}
     	return null;
