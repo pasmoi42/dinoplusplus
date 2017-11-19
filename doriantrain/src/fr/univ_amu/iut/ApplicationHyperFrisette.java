@@ -80,6 +80,8 @@ public class ApplicationHyperFrisette {
 		System.out.println(gareAix + "\n" + gareTataouineLesBains);
 
 		
+		Train t = FabriqueTrain.getSingleton().getNouveauTrain();
+		
 	}
 	
 	private void fermetureProgramme()
