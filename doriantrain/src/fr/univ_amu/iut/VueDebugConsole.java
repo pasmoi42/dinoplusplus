@@ -19,7 +19,10 @@ public class VueDebugConsole implements VueGenerique {
 	@Override
 	public void metAJourAffichage() {
 		// TODO Auto-generated method stub
-
+		System.out.println("#####################");
+		System.out.println("# Nouvel affichage: #");
+		System.out.println("#####################");
+		System.out.println("...");
 	}
 
 	@Override
