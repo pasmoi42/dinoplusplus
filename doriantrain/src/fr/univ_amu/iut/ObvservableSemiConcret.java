@@ -2,8 +2,16 @@ package fr.univ_amu.iut;
 
 import java.util.LinkedList;
 
-
-public class ObvservableSemiConcret implements Observable {
+/**
+ * Pas une classe completement concrete, car elle est juste par pour 
+ * l'heritage: c'est la base commune de tous les systemes de
+ * reception de commandes.
+ * 
+ * 
+ * @author Dorian
+ *
+ */
+public abstract class ObvservableSemiConcret implements Observable {
 
 	LinkedList<ObservateurDeCommande> lesObservateurs;
 	

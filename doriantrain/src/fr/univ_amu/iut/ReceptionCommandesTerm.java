@@ -1,30 +1,55 @@
 package fr.univ_amu.iut;
 
-public class ReceptionCommandesTerm implements ReceptionCommandes {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class ReceptionCommandesTerm extends ObvservableSemiConcret implements ReceptionCommandes {
+
+	private String faitLaLecture() {
+		String ret;
+		
+		ret = new String("erreur");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		try
+		{
+			ret = br.readLine();
+
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+		return ret;
+	}
 
 	@Override
 	public void obtiensActionSuivanteAFaire() {
+		String choix;
 		
-		
+		this.notifierObservateurs();
+		choix = faitLaLecture();
+		switch (choix) {
+		case "1":
+			
+			break;
+		case "2":
+			
+			break;
+		case "3":
+			
+			break;
+		case "4":
+			
+			break;
+
+		default:
+			
+			break;
+		}
+	    
+
 		
 	}
 
-	@Override
-	public void enregistrerObservateur(ObservateurDeCommande observateur) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void supprimerObservateur(ObservateurDeCommande observateur) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void notifierObservateurs() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 		
 }
