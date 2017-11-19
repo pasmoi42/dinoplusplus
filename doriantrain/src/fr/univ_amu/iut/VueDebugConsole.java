@@ -4,7 +4,9 @@ public class VueDebugConsole implements VueGenerique {
 
 	@Override
 	public void initialiseAffichage() {
-		// TODO Auto-generated method stub
+		System.out.println("######################");
+		System.out.println("# Debut du programme #");
+		System.out.println("######################");
 
 	}
 
