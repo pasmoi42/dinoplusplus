@@ -101,8 +101,6 @@ public class ApplicationHyperFrisette {
 
 		leSimulateur = new ApplicationHyperFrisette();
 		leSimulateur.lance();
-
-
 	}
 }
 
