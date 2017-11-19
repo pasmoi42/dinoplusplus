@@ -29,4 +29,20 @@ public class ControleurDeTrains {
 		}
 		return leSeulEtUniqueControlleur;
 	}
+	
+	/** recoit la demande d'une entreprise de mettre un train sur un sillon (et repond accepte ou reffuse).*/
+	public boolean reserveSillon(Train t, LigneFerroviaire l, int heureSillon)
+	{
+		Sillon s;
+
+		s = l.getSillon(heureSillon);
+		if (s.estLibre())
+		{
+			s.setTrain(t);
+			return true;
+		}
+		else
+			return false;
+	}
+
 }

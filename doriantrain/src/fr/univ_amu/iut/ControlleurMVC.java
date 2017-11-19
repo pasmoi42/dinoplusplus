@@ -38,19 +38,9 @@ public class ControlleurMVC {
 	//TODO: recoit la demande d'une entreprise de mettre un train sur un sillon (et repond accepte ou reffuse).
 	public boolean reserveSillon(Train t, LigneFerroviaire l, int heureSillon)
 	{
-		Sillon s;
-		
-		s = l.getSillon(heureSillon);
-		if (s.estLibre())
-		{
-			s.setTrain(t);
-			return true;
-		}
-		else
-			return false;
+		return ControleurDeTrains.getControlleur().reserveSillon(t, l, heureSillon);
 	}
 
-	//TODO: calcul le cout (previsionnel) de chaque train avant de lancer.
 	
 	//TODO: lance la simulation:
 	//TODO: faire avancer la simulation de n temps.
