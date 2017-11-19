@@ -14,18 +14,18 @@ package fr.univ_amu.iut;
  * du pattern "singleton".
  *
  */
-public class Controlleur {
+public class ControleurDeTrains {
 	
-	private Controlleur()	{
+	private ControleurDeTrains()	{
 		
 	}
  
-	private static Controlleur leSeulEtUniqueControlleur = null;
+	private static ControleurDeTrains leSeulEtUniqueControlleur = null;
 	 
 	/** seule et unique maniere d'acceder a notre singleton-controlleur */
-	public static Controlleur getControlleur() {
+	public static ControleurDeTrains getControlleur() {
 		if (leSeulEtUniqueControlleur == null) {
-			leSeulEtUniqueControlleur = new Controlleur();
+			leSeulEtUniqueControlleur = new ControleurDeTrains();
 		}
 		return leSeulEtUniqueControlleur;
 	}
