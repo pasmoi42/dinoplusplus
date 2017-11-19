@@ -134,8 +134,10 @@ public class ApplicationHyperFrisette {
 		DonneesFerrovieres.accedeAuxDonnees(); //on appelle le  getSingleton pour forcer l'initilisation ici.
 
 		// demarrer l'affichage d'une ou plusieurs vues.
-		//laVue = FabriqueDeVue.getFabriqueDebugConsole();
-		laVue = FabriqueDeVue.getFabriqueEnssembleReseau();
+		if (MODE_ENTREE == 0)
+			laVue = FabriqueDeVue.getFabriqueDebugConsole();
+		else
+			laVue = FabriqueDeVue.getFabriqueEnssembleReseau();
 
 		// prendre en compte (en boucle?) les odres du/des controlleurs pour ... que le programme fasse quelquechose.
 
