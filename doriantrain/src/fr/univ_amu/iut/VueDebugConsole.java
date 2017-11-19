@@ -75,7 +75,7 @@ public class VueDebugConsole implements VueGenerique {
 			System.out.println("2) Creer une entreprise");
 			System.out.println("3) Creer un train");
 			System.out.println("4) Le choix 4");
-			System.out.println("D) La réponse D ...");
+			System.out.println("D) La reponse D ...");
 			break;
 		case VUE_MENU_CREER_ENTREPRISE:
 			System.out.println("###################################");
