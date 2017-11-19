@@ -8,10 +8,11 @@ public class FabriqueDeVue {
 	/**
 	 * donne un objet VueDebugConsole pret a l'emplois.
 	 */
-	public VueGenerique getFabriqueDebugConsole() {
+	public static VueGenerique getFabriqueDebugConsole() {
 		VueGenerique laVue;
 				
 		laVue = new VueDebugConsole();
+		laVue.initialiseAffichage();
 		return laVue;
 	}
 }

@@ -85,16 +85,20 @@ public class ApplicationHyperFrisette {
 	 * (main objet).
 	 */
 	public void lance() {
-		//test_viteuf1();
+		VueGenerique laVue;
+		
 
 		//mettre en place le modele: Initialiser tous les trucs par defaut qui doivent toujours exister.
 		DonneesFerrovieres.accedeAuxDonnees(); //on appelle le  getSingleton pour forcer l'initilisation ici.
 
 		// demarrer l'affichage d'une ou plusieurs vues.
+		laVue = FabriqueDeVue.getFabriqueDebugConsole();
 
 		// prendre en compte (en boucle?) les odres du/des controlleurs pour ... que le programme fasse quelquechose.
 
 
+		
+		//test_viteuf1();
 	}
 
 	public static void main(String[] args) {
