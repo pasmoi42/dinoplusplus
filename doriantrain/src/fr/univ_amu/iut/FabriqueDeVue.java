@@ -13,6 +13,8 @@ public class FabriqueDeVue {
 				
 		laVue = new VueDebugConsole();
 		laVue.initialiseAffichage();
+		
+		//TODO: enregistrer la vue
 		return laVue;
 	}
 }

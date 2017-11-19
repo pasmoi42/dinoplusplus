@@ -15,6 +15,11 @@ public abstract class ObvservableSemiConcret implements Observable {
 
 	LinkedList<ObservateurDeCommande> lesObservateurs;
 	
+	public ObvservableSemiConcret() {
+		lesObservateurs = new LinkedList<ObservateurDeCommande>();
+		
+	}
+	
 	@Override
 	public void enregistrerObservateur(ObservateurDeCommande observateur) {
 		lesObservateurs.addLast(observateur);

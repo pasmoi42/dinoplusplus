@@ -99,11 +99,14 @@ public class ApplicationHyperFrisette {
 		
 	
 	public void boucleApplication() {
+		ReceptionCommandesTerm monInput;
 		
+		monInput = new ReceptionCommandesTerm();
+		monInput.enregistrerObservateur(laVue);
 		while (true)
 		{
 			laVue.metAJourAffichage();
-			
+			monInput.obtiensActionSuivanteAFaire();
 			monSleepDeBoucle();
 		}
 		

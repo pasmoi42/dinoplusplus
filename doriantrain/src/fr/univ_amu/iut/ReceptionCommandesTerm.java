@@ -6,6 +6,10 @@ import java.io.InputStreamReader;
 
 public class ReceptionCommandesTerm extends ObvservableSemiConcret implements ReceptionCommandes {
 
+	public ReceptionCommandesTerm() {
+		super();
+	}
+	
 	private String faitLaLecture() {
 		String ret;
 		
