@@ -5,7 +5,7 @@ package fr.univ_amu.iut;
 
 public class ApplicationHyperFrisette {
 	
-	public static final int MODE_ENTREE = 1; // 0 = interactif ; 1 = choix tout faits.
+	public static /*final*/ int MODE_ENTREE = 1; // 0 = interactif ; 1 = choix tout faits.
 	
 	/*
 	 * Architecture du simulateur HyperFrisette:
@@ -145,6 +145,8 @@ public class ApplicationHyperFrisette {
 	public static void main(String[] args) {
 		ApplicationHyperFrisette leSimulateur;
 
+		if (args.length > 2 )
+			MODE_ENTREE = (MODE_ENTREE==0)? 1:0;
 		leSimulateur = new ApplicationHyperFrisette();
 		leSimulateur.lance();
 		leSimulateur.fermetureProgramme();
