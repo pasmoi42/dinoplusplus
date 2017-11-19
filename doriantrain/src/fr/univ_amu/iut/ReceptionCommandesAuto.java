@@ -31,7 +31,10 @@ public class ReceptionCommandesAuto extends ObvservableSemiConcret implements Re
 			Train.creeTrain("S1r3n", 5, 5, 5, 5, ETypeWagon.WAGON_PASSAGER, 3);
 			break;
 		case 3:
-			
+			Train.creeTrain("S1r3n", 5, 5, 5, 5, ETypeWagon.WAGON_PASSAGER, 8);
+			break;
+		case 4:
+			Train.creeTrain("S1r3n", 5, 5, 5, 10, ETypeWagon.WAGON_PASSAGER, 1);
 			break;
 
 		default:
