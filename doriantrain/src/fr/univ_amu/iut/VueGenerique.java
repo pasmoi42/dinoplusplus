@@ -13,10 +13,26 @@ public interface VueGenerique
 {
 	
 	/**
+	 * Initialise l'affichage
+	 */
+	public void initialiseAffichage();
+	
+	/**
 	 * Va regarder ce qui a change dans le modele (DonneesFerrovieres)
 	 * pour le prendre en comtpe pour "l'affichage".
 	 */
 	public void prendEnCompteNouvellesDonnes();
+
+	/**
+	 * Initialise l'affichage
+	 */
+	public void metAJourAffichage();
 	
+
+	/**
+	 * Initialise l'affichage
+	 */
+	public void fermeAffichage();
+
 	
 }
