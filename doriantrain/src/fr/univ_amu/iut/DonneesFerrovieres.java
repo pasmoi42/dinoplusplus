@@ -45,6 +45,15 @@ public class DonneesFerrovieres {
 		Gare g;
 		
 		g = new Gare(nomGare);
+		for (Gare uneGare : toutesLesGares) 
+		{
+			if (uneGare.toString().equalsIgnoreCase(g.toString()))
+			{
+				return uneGare;
+			}
+		}
+		
+		
 		toutesLesGares.addLast(g);
 		return g;
 	}
