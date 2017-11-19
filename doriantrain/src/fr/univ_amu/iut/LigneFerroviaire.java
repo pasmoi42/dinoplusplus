@@ -4,14 +4,14 @@ public class LigneFerroviaire  {
 
     private Gare gareDepart;
     private Gare gareArrivee;
-
+    
     private LigneFerroviaire (Gare d, Gare a)
     {
         this.gareDepart = d;
         this.gareArrivee = a;
     }
 
-    public LigneFerroviaire (String gareD, String gareA)
+    private LigneFerroviaire (String gareD, String gareA)
     {
     	this.gareDepart = Gare.creeGare(gareD);
     	this.gareArrivee = Gare.creeGare(gareA);
