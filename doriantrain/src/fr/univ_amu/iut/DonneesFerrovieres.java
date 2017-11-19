@@ -1,6 +1,6 @@
 package fr.univ_amu.iut;
 
-import java.util.Collection;
+import java.util.LinkedList;
 
 /**
  * Toutes les donnes utilisees par ce logiciel de simulation. Constitue le
@@ -12,8 +12,10 @@ import java.util.Collection;
  */
 public class DonneesFerrovieres {
 	
+	LinkedList<Gare> toutesLesGares;
+	
 	private DonneesFerrovieres() {
-		
+		toutesLesGares = new LinkedList<Gare>();
 	}
 	
 	private static DonneesFerrovieres leSeulEtUniqueModele = null;
@@ -25,4 +27,25 @@ public class DonneesFerrovieres {
 		}
 		return leSeulEtUniqueModele;
 	}
+
+	public static void creeUnReseau()
+	{
+		//DonneesFerrovieres.accedeAuxDonnees();
+		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Paris");
+		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Marseille");
+		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Lyon");
+		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Bordeaux");	
+		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Lille");	
+		DonneesFerrovieres.accedeAuxDonnees().creeUneGare("Nice");
+		
+	}
+
+
+	private void creeUneGare(String nomGare) {
+		Gare g;
+		
+		g = new Gare(nomGare);
+		toutesLesGares.addLast(g);
+	}
+
 }
