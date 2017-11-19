@@ -29,7 +29,7 @@ public class ApplicationHyperFrisette {
 	 *        * la lecture sur la ligne de commande de stdin, avec un menu et le choix
 	 *          d'actions possibles ...
 	 *        * ... (des clicks sur les jolis boutons d'une jolie interface graphique). 
-	 *     - Dans le controlleurs, de maniere sepraree du "recevage" d'ordre/ des commandes,
+	 *     - Dans le controlleurs, de maniere separee une reception des ordre/ des commandes,
 	 *       on va avoir chaque traitement possible qu'on va coder: moteur de simulation.
 	 * 
 	 */

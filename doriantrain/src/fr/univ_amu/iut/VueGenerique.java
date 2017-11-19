@@ -11,7 +11,7 @@ package fr.univ_amu.iut;
  * @author dorian
  *
  */
-public interface VueGenerique 
+public interface VueGenerique extends ObservateurDeCommande
 {
 	
 	/**
@@ -35,6 +35,12 @@ public interface VueGenerique
 	 * Initialise l'affichage
 	 */
 	public void fermeAffichage();
-
+	
+	/**
+	 * Callback du pattern Observateur:
+	 * pour etre notifie qu'on doit afficher un truc special
+	 * par exemple:
+	 * lie a la saisie de touche clavier par le controlleur
+	 */	
 	
 }

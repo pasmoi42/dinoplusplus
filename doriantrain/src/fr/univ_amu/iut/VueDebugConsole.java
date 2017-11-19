@@ -23,12 +23,24 @@ public class VueDebugConsole implements VueGenerique {
 		System.out.println("# Nouvel affichage: #");
 		System.out.println("#####################");
 		System.out.println("...");
+		System.out.println("############################");
+		System.out.println("# Fin du Nouvel affichage: #");
+		System.out.println("############################");
+
 	}
 
 	@Override
 	public void fermeAffichage() {
 		// TODO Auto-generated method stub
+		System.out.println("############");
+		System.out.println("# bye bye! #");
+		System.out.println("############");
+	}
 
+	@Override
+	public void mettreAJour() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

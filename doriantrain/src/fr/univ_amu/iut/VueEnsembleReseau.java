@@ -31,4 +31,10 @@ public class VueEnsembleReseau  implements VueGenerique {
 	public void fermeAffichage() {
 		// TODO Auto-generated method stub
 	}
+
+	@Override
+	public void mettreAJour() {
+		// TODO Auto-generated method stub
+		
+	}
 }
