@@ -7,7 +7,7 @@ package fr.univ_amu.iut;
  * @author Dorian
  *
  */
-public class VueEnssembleReseau  implements VueGenerique {
+public class VueEnsembleReseau  implements VueGenerique {
 	
 	@Override
 	public void initialiseAffichage() {
