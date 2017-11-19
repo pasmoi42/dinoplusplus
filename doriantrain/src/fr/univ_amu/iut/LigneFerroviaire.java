@@ -2,19 +2,34 @@ package fr.univ_amu.iut;
 
 public class LigneFerroviaire  {
 
+	private static final int NB_SILLON = 24;
     private Gare gareDepart;
     private Gare gareArrivee;
+    Sillon[] lesSillons; //les sillons de cette ligne
+    
+    private void creeSillons()
+    {
+    	int i;
+    	
+    	lesSillons = new Sillon[NB_SILLON];
+        for (i=NB_SILLON-1 ; i > 0; --i)
+        {
+        	lesSillons[i] = new Sillon();
+		}
+    }
     
     private LigneFerroviaire (Gare d, Gare a)
-    {
+    {  		
         this.gareDepart = d;
         this.gareArrivee = a;
+        creeSillons();
     }
 
     private LigneFerroviaire (String gareD, String gareA)
-    {
+    {    	
     	this.gareDepart = Gare.creeGare(gareD);
     	this.gareArrivee = Gare.creeGare(gareA);
+    	creeSillons();
     }
 
     public Gare getGareArrivee() {
