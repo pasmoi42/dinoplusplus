@@ -25,8 +25,8 @@ public class LigneFerroviaire  {
         return gareDepart;
     }
 
-    public void afficher() {
-        System.out.print("La ligne va de " + this.getGareDepart() + " à " + this.getGareArrivee());
+    public String toString() {
+        return "La ligne va de " + this.getGareDepart() + " à " + this.getGareArrivee();
     }
     
     /**
