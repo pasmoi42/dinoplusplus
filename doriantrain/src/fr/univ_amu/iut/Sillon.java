@@ -4,8 +4,10 @@ public class Sillon
 {
 	private static final int COUT_PAR_DEFAULT = 50;
 	
-	boolean libre;
-	Train leTrainQuiOccupeCeSillon;
+	private boolean libre;
+	private Train leTrainQuiOccupeCeSillon;
+	private double position;	//0.1 = 10min , centaine de minute
+
 	private int coututilisation;
 	private boolean etatIncident;
 
@@ -14,6 +16,7 @@ public class Sillon
 		leTrainQuiOccupeCeSillon = null;
 		coututilisation = COUT_PAR_DEFAULT;
 		etatIncident = false;
+		position = -1;
 	}
 	
 	void setTrain(Train leTrain)
