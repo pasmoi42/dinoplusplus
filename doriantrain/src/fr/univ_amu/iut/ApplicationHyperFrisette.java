@@ -79,11 +79,13 @@ public class ApplicationHyperFrisette {
 
 		
 	}
+	
 		
 	
 	public static void main(String[] args) {
 		
-		ApplicationHyperFrisette.test_viteuf1();
+		test_viteuf1();
+		
 
 	}
 }
