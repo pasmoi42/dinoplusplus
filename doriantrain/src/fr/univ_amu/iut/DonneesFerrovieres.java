@@ -28,6 +28,9 @@ public class DonneesFerrovieres {
 		return leSeulEtUniqueModele;
 	}
 
+	/**
+	 * Cree le monde ...
+	 */
 	public static void creeUnReseau()
 	{
 		//DonneesFerrovieres.accedeAuxDonnees();
