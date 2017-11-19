@@ -6,4 +6,9 @@ public abstract class Wagon {
     public void setCoutUnitaire (double coutUnitaire){
         this.coutUnitaire = coutUnitaire;
     }
+    
+    public String getTypeStr()
+    {
+    	return "non instanciable";
+    }
 }

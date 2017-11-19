@@ -50,7 +50,12 @@ public abstract class Train {
     
     @Override
     public String toString(){
-        return "Train "+idUniqueDuTrain+" de "+wagons.size()+" wagons de l'entreprise "+proprietaire.getNom();
+    	String trainEnTexte;
+    	trainEnTexte = "Train "+idUniqueDuTrain+" de "+wagons.size()+" wagons de l'entreprise "+proprietaire.getNom()+" wagons:";
+    	for (Wagon wagon : wagons) {
+    		trainEnTexte += "(" +wagon.getTypeStr()+ ")";
+		}
+    	return trainEnTexte;
     }
     
     
