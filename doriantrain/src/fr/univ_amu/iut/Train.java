@@ -8,14 +8,22 @@ public abstract class Train {
     private EntrepriseFerroviaire proprietaire;
     private Collection<Wagon> wagons = new LinkedList<>();
     private int idUniqueDuTrain; //un num unique pour savoir quel train c'est ... // lecture seule
+    
+    private LinkedList<Sillon> lesReservations; //reference sur sillon reserves, pour que ca soit pratique de faire rouler le train
 
     public Train() {
     	idUniqueDuTrain = compteurNouveauTrain;
     	++compteurNouveauTrain;
+    	lesReservations = new LinkedList<Sillon>();
 	}
     
     public int getIdUnique() { //un getteur mais surtout pas de setter, car lecture seule!
     	return idUniqueDuTrain;
+    }
+    
+
+    public void memoriseReservationDeSillon(Sillon s){
+    	lesReservations.add(s);
     }
     
     public void deplacer(){

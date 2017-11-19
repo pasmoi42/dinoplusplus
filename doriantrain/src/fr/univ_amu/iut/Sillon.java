@@ -19,13 +19,18 @@ public class Sillon
 		position = -1;
 	}
 	
-	void setTrain(Train leTrain)
+	public boolean estLibre()
+	{
+		return libre;
+	}
+	
+	public void setTrain(Train leTrain)
 	{
 		leTrainQuiOccupeCeSillon = leTrain;
 		libre = false;
 	}
 	
-	void libere()
+	public void libere()
 	{
 		libre = true;
 		leTrainQuiOccupeCeSillon = null;

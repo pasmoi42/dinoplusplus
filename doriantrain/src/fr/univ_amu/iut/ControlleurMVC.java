@@ -33,10 +33,23 @@ public class ControlleurMVC {
 	public void creeTrain(String siren, int iLarg, int iLong, int iTaille, int iVitMax, ETypeWagon eTypeWagon, int nbWagon)
 	{
 		Train.creeTrain(siren, iLarg, iLong, iTaille, iVitMax, eTypeWagon, nbWagon);
-	}
+	}	
 
 	//TODO: recoit la demande d'une entreprise de mettre un train sur un sillon (et repond accepte ou reffuse).
-	
+	public boolean reserveSillon(Train t, LigneFerroviaire l, int heureSillon)
+	{
+		Sillon s;
+		
+		s = l.getSillon(heureSillon);
+		if (s.estLibre())
+		{
+			s.setTrain(t);
+			return true;
+		}
+		else
+			return false;
+	}
+
 	//TODO: calcul le cout (previsionnel) de chaque train avant de lancer.
 	
 	//TODO: lance la simulation:

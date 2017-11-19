@@ -18,6 +18,13 @@ public class LigneFerroviaire  {
 		}
     }
     
+    Sillon getSillon(int i)
+    {
+    	assert(i >= 0);
+    	assert(i <= 23);
+    	return lesSillons[i];
+    }
+    
     private LigneFerroviaire (Gare d, Gare a)
     {  		
         this.gareDepart = d;
@@ -57,5 +64,7 @@ public class LigneFerroviaire  {
     	nouvelleLigne =  DonneesFerrovieres.accedeAuxDonnees().ajouteUneLigneAuReseau(nouvelleLigne);    	
     	return nouvelleLigne;
     }
+    
+    
     
 }
