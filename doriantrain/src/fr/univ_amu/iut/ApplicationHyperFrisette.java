@@ -88,6 +88,7 @@ public class ApplicationHyperFrisette {
 		//test_viteuf1();
 
 		//mettre en place le modele: Initialiser tous les trucs par defaut qui doivent toujours exister.
+		DonneesFerrovieres.accedeAuxDonnees(); //on appelle le  getSingleton pour forcer l'initilisation ici.
 
 		// demarrer l'affichage d'une ou plusieurs vues.
 
