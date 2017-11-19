@@ -76,6 +76,11 @@ public class VueEnsembleReseau  implements VueGenerique {
 	public void mettreAJour(EFonctionaliteAAfficher f) {
 		// rien a faire pour cette vue ... en general ...
 
+		System.out.println("####################");
+		System.out.println("# SIMULATION FINIE #");
+		System.out.println("####################");
+
+		
 		if (f == EFonctionaliteAAfficher.VUE_AFFICHE_COUTS_TRAIN)
 		{
 			for (Train unTrain : DonneesFerrovieres.accedeAuxDonnees().tousLesTrains) {

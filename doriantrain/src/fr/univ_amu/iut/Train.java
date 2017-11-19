@@ -94,6 +94,11 @@ public abstract class Train {
     	{
     		//donc a on fini ce sillon, donc on peut l'ajouter au cout du train
     		coutObtenuDuTrain += positionActuelle.getCoututilisation() * wagons.size();
+    		/*
+    		System.err.println("wagons.size(): "+ wagons.size());
+    		System.err.println("positionActuelle.getCoututilisation(): "+ positionActuelle.getCoututilisation());
+    		System.err.println("coutObtenuDuTrain: "+ coutObtenuDuTrain);*/
+
     	}
     	
     	nomGare = paramNomGare;
@@ -104,6 +109,12 @@ public abstract class Train {
     
     public void sortTrainDuReseau()    
     {
+    	if (etatActuel == EEtatTrain.TRAIN_AVANCE_SILLON)
+    	{
+    		//donc a on fini ce sillon, donc on peut l'ajouter au cout du train
+    		coutObtenuDuTrain += positionActuelle.getCoututilisation() * wagons.size();
+    	}
+    	
     	nomGare = "";
     	etatActuel = EEtatTrain.TRAIN_HORS_RESEAU;
     	positionActuelle = null;
