@@ -59,7 +59,11 @@ public class DonneesFerrovieres {
 		toutesLesGares.addLast(laNouvelleGare);
 		return laNouvelleGare;
 	}
-
+	
+    /**
+     * Si la ligne n'existe pas encore dans le reseau, ca l'y ajoute.
+     * Sinon, ca retourne la ligne existante 
+     */
 	public LigneFerroviaire ajouteUneLigneAuReseau(LigneFerroviaire nouvelleLigne) {
 		
 		for (LigneFerroviaire uneLigne : toutesLesLignes) {

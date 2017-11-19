@@ -29,6 +29,10 @@ public class LigneFerroviaire  {
         System.out.print("La ligne va de " + this.getGareDepart() + " à " + this.getGareArrivee());
     }
     
+    /**
+     * Si la ligne n'existe pas encore, ca la cree et l'ajoute au reseau
+     * Sinon, ca retourne la ligne existante 
+     */
     public static LigneFerroviaire creeUneLigne(String gareD, String gareA)
     {
     	LigneFerroviaire nouvelleLigne;
