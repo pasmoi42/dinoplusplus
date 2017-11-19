@@ -71,14 +71,15 @@ public class ControlleurMVC {
 		DonneesFerrovieres.accedeAuxDonnees().heureActuelle += temps;
 		for (Train t : DonneesFerrovieres.accedeAuxDonnees().tousLesTrains) {
 			reservation = t.aUneReservationALHeure(DonneesFerrovieres.getHeureActuelle()+0.99);
-			if (reservation != null)
+			if (reservation != null && t.etatActuel == EEtatTrain.TRAIN_HORS_RESEAU)
 				t.placeTrainGare(reservation.ligneDeCeSillon.getGareDepart().getNom());
 			
 			reservation = t.aUneReservationALHeure(DonneesFerrovieres.getHeureActuelle());
 			if (reservation != null)
-			{				
-				avancement = t.progressionDansLeSillon;
-				avancement += temps;
+			{			
+				avancement = (DonneesFerrovieres.accedeAuxDonnees().heureActuelle - reservation.heure);
+				//avancement = t.progressionDansLeSillon;
+				//avancement += temps;
 				if (avancement >= 1) //alors il a passe plus d'une heure dans le sillon
 				{
 					t.placeTrainGare(reservation.ligneDeCeSillon.getGareArrivee().getNom());					
