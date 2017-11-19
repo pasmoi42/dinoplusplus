@@ -76,13 +76,10 @@ public class VueDebugConsole implements VueGenerique {
 			System.out.println("###################################");
 			System.out.println("# Sous menu: creer entreprise:    #");
 			System.out.println("###################################");
-			System.out.println("  Entrer le nom d'entreprise, puis entrer,");
-			System.out.println("  puis entrer la categorie de l'entreprise (passagers ou animaux ou cargo)");
-			System.out.println("  puis entrer le numero de l'entreprise");
-			System.out.println("  puis entrer le siren de l'entreprise");
-			System.out.println("3) Le choix 3");
-			System.out.println("4) Le choix 4");
-			System.out.println("D) La réponse D ...");
+			System.out.println("  Entrer le nom d'entreprise, puis tapper entrer,");
+			System.out.println("  puis entrer la categorie de l'entreprise (passagers ou animaux ou cargo), puis tapper entrer,");
+			System.out.println("  puis entrer le numero de l'entreprise, puis tapper entrer,");
+			System.out.println("  puis entrer le siren de l'entreprise, puis tapper entrer");
 			break;
 		default:
 			//ERR_RIEN
