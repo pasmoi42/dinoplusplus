@@ -17,7 +17,7 @@ public class DonneesFerrovieres {
 	
 	private DonneesFerrovieres() {
 		toutesLesGares = new LinkedList<Gare>();
-		toutesLesLignes = new LinkedList<LigneFerroviaire>();
+		toutesLesLignes = new LinkedList<LigneFerroviaire>();				
 	}
 	
 	private static DonneesFerrovieres leSeulEtUniqueModele = null;
@@ -26,6 +26,7 @@ public class DonneesFerrovieres {
 	public static DonneesFerrovieres accedeAuxDonnees() {
 		if (leSeulEtUniqueModele == null) {
 			leSeulEtUniqueModele = new DonneesFerrovieres();
+			creeUnReseau();
 		}
 		return leSeulEtUniqueModele;
 	}

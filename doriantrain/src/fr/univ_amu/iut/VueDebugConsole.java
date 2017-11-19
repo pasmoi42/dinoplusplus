@@ -22,6 +22,13 @@ public class VueDebugConsole implements VueGenerique {
 		System.out.println("#####################");
 		System.out.println("# Nouvel affichage: #");
 		System.out.println("#####################");
+		System.out.println("  Liste des gares: ");
+		for (Gare uneGare : DonneesFerrovieres.accedeAuxDonnees().toutesLesGares) {
+			System.out.print("    ");
+			System.out.println(uneGare.toString());
+		}
+		
+		
 		System.out.println("...");
 		System.out.println("############################");
 		System.out.println("# Fin du Nouvel affichage: #");
