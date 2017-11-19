@@ -79,30 +79,29 @@ public class ApplicationHyperFrisette {
 
 		
 	}
-	
+
 	/**
 	 * Tout le programme.
 	 * (main objet).
 	 */
 	public void lance() {
-		// TODO Auto-generated method stub
+		//test_viteuf1();
+
+		//mettre en place le modele: Initialiser tous les trucs par defaut qui doivent toujours exister.
+
+		// demarrer l'affichage d'une ou plusieurs vues.
+
+		// prendre en compte (en boucle?) les odres du/des controlleurs pour ... que le programme fasse quelquechose.
+
 
 	}
-	
+
 	public static void main(String[] args) {
-		
-		test_viteuf1();
-		
 		ApplicationHyperFrisette leSimulateur;
-		
+
 		leSimulateur = new ApplicationHyperFrisette();
 		leSimulateur.lance();
-		
-		//mettre en place le modele: Initialiser tous les trucs par defaut qui doivent toujours exister.
-		
-		// demarrer l'affichage d'une ou plusieurs vues.
-		
-		// prendre en compte (en boucle?) les odres du/des controlleurs pour ... que le programme fasse quelquechose.
+
 
 	}
 }
