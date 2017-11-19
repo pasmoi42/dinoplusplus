@@ -36,8 +36,12 @@ public class VueDebugConsole implements VueGenerique {
 		for (EntrepriseFerroviaire uneEnt : DonneesFerrovieres.accedeAuxDonnees().toutesLesEntreprises) {
 			System.out.print("    ");
 			System.out.println(uneEnt);
+		}		
+		System.out.println("  Liste des Trains: ");
+		for (Train unTrain : DonneesFerrovieres.accedeAuxDonnees().tousLesTrains) {
+			System.out.print("    ");
+			System.out.println(unTrain);
 		}
-		
 		
 		System.out.println("...");
 		System.out.println("############################");

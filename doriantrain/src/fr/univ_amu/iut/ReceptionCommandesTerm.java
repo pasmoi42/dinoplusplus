@@ -130,16 +130,11 @@ public class ReceptionCommandesTerm extends ObvservableSemiConcret implements Re
 		
 		//lecture siren
 		siren = faitLaLecture();
-
 		
-		//lecture nomEntreprise
-		nomEntreprise = faitLaLecture();
 		//lecture largeur
 		iLarg = litSaisieInt();
 		//lecture longueur
 		iLong = litSaisieInt();
-		//lecture taille
-		iTaille = litSaisieInt();
 		//lecture taille
 		iTaille = litSaisieInt();
 		//lecture vitesseMax

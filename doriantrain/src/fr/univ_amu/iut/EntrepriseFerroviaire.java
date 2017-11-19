@@ -64,6 +64,11 @@ public abstract class EntrepriseFerroviaire {
     {
     	return siren;
     }
-    
+
+    public String getNom()
+    {
+    	return nom;
+    }
+
     
 }

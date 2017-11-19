@@ -5,6 +5,8 @@ package fr.univ_amu.iut;
 
 public class ApplicationHyperFrisette {
 	
+	public static final int MODE_ENTREE = 1; // 0 = interactif ; 1 = choix tout faits.
+	
 	/*
 	 * Architecture du simulateur HyperFrisette:
 	 * 
@@ -86,21 +88,28 @@ public class ApplicationHyperFrisette {
 		laVue.fermeAffichage();
 	}
 
+	@SuppressWarnings("all")
 	public void monSleepDeBoucle() {
 		try
 		{
-			Thread.sleep(1000);
+			if (MODE_ENTREE == 0)
+				Thread.sleep(1000);
+			else
+				Thread.sleep(5000);
 		}
 		catch (Exception e) {
 			// bah ... non ... ca doit marcher!
 		}
 	}
 		
-	
+	@SuppressWarnings("all")
 	public void boucleApplication() {
-		ReceptionCommandesTerm monInput;
-		
-		monInput = new ReceptionCommandesTerm();
+		ReceptionCommandes monInput;
+				
+		if (MODE_ENTREE == 0)
+			monInput = new ReceptionCommandesTerm();
+		else
+			monInput = new ReceptionCommandesAuto();
 		monInput.enregistrerObservateur(laVue);
 		while (true)
 		{

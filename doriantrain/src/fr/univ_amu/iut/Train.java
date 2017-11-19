@@ -39,6 +39,13 @@ public abstract class Train {
     public void ajouteWagons(Wagon wagon){
         this.wagons.add(wagon);
     }
+    
+    @Override
+    public String toString(){
+        return "Train "+idUniqueDuTrain+" de "+wagons.size()+" wagons de l'entreprise "+proprietaire.getNom();
+    }
+    
+    
     public abstract void getCout ();
     
     
